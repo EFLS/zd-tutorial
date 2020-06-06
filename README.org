@@ -5,6 +5,10 @@ This repository contains a collection of Org-mode files that provide an introduc
 Clone this repository and open file =2020-01-05-2214 README.org= in Emacs to get started.
 Instructions on how to install Zetteldeft are included.
 
+#+begin_src
+git clone https://github.com/EFLS/zd-tutorial
+#+end_src
+
 Comments and additions are more than welcome, via issues or pull requests.
 
 More information in
