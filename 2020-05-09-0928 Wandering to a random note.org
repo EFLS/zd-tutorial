@@ -1,4 +1,4 @@
-#+title: Searching for a random note
+#+title: Wandering to a random note
 # Tags #zd-expansion #zetteldeft #zd-tutorial
 
 Backlink: §2020-04-17-1605 Expansions HUB

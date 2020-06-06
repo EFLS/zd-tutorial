@@ -8,8 +8,8 @@ The tag =#zd-expansions= collects notes with snippets of code you can use to ext
 (efls/zetteldeft-links "#zd-expansion")
 #+END_SRC
 
+ - §2020-05-09-0928 Wandering to a random note
  - §2020-04-17-1611 Automated lists of links
- - §2020-05-09-0928 Searching for a random note
  - §2020-03-25-0928 Integration with org-link
 
    Sat Jun  6 20:03:30 2020
