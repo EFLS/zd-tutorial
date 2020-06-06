@@ -1,0 +1,22 @@
+#+title: Zetteldeft history
+# Tags #zetteldeft
+
+Backlink §2020-02-15-1247
+
+Early in my PhD in sociology, I had heard stories about how Niklas Luhmann, the German social theorist known for his inscrutable systems theory, implemented a system to link tens of thousands of notes together.
+He turned his /Zettelkasten/ into a system that, in his words, could /talk back/ to him.
+(See §2020-02-07-2328 on Luhmann's Zettelkasten.)
+
+Some time later -- I can't remember exactly when -- I came across [[http://zettelkasten.de][zettelkasten.de]].
+At the thime, Christian and Sascha were still reviewing software rather than building their own, but even then they were actively exploring the possibility of using software to implement -- or rather emulate -- Luhmann's Zettelkasten system.
+
+I didn't play around with a zettelkasten-like sytem back then, but I was inspired by their explorations.
+At the time, I used a variety of ways to keep notes and thoughts in order: a paper notebook, markdown notes in Ulysses and later in Atom, some notes in DEVONthink, etc.
+
+It was only after I fell into the Emacs rabbit hole sometime in 2017, that I started to dream about Zettelkasten-type of linking between my notes.
+This was no coincidence: it was precisely the openness of emacs that allowed me to experiment with some simple lines of code.
+
+Or, even better, I could simply document my attempts at extending the =deft= package.
+I looked at some basic =elisp= tutorials, spent some time looking at the =deft= code -- of which I understood only little -- and, most importantly, I stumbled upon an easy way to access =deft='s main functions programmatically (thanks to [[https://github.com/jrblevin/deft/issues/52#issuecomment-401766828][saf-dimitry]] on Github).
+I started playing around with =emacs lisp= and kept the snippets of code in a =.org= notebook.
+And all the rest is fooling around.

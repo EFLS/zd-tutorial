@@ -1,0 +1,15 @@
+#+title: Why Zetteldeft links?
+# Tags #zetteldeft
+
+A question often asked, and rightfully so, is why zetteldeft doesn't use any of the built-in emacs types of links, such as provided by org-mode, for example.
+
+There are a couple of reasons for this.
+- Zetteldeft is not limited to Org-mode, but can be used in and from any mode.
+- Org-mode links depend on filenames and might break when files are moved or the filename changes.
+- I want to prevent lock in as much as possible. Many people use a Markdown-based system, and you could perfectly use Zetteldeft together with other applications that make Markdown notes (theoretically at least -- I haven't tested this myself)
+
+This means that, with some tweaking, Zetteldeft kan work with =[[§2020-01-05-2214 these types]]= of links and Markdown files, so that it plays nicely with [[https://zettelkasten.de/the-archive/][The Archive]] for example.
+
+See §2020-04-17-1532 for further notes on how to set up Zetteldeft similar to /The Archive/ via customization.
+
+For Org-mode links, look at §2020-03-25-0928.

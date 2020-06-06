@@ -1,0 +1,49 @@
+#+title: Zetteldeft and Markdown
+# Tags #zd-tutorial #zetteldeft #customize
+
+Backlink: §2020-05-13-1815 Customizing Zetteldeft
+
+In principle, Zetteldeft works from any mode.
+
+To make it work nicely with a Markdown of Zettelkasten, there are a few things you can do.
+
+First, make sure =deft-extensions= is set correctly.
+If =md= is the first element on the list, new notes will be Markdown notes.
+Zetteldeft uses Deft to create new notes, so using =zetteldeft-new-file= should now create Markdown files.
+
+#+begin_src emacs-lisp :results silent
+(setq deft-extensions '("md" "org" "txt"))
+#+end_src
+
+In such Zettelkasten links are often wrapped in square brackets.
+This can be easily achieved by setting the =zetteldeft-link-indicator= and =zetteldeft-link-suffix=.
+
+#+begin_src emacs-lisp :results silent
+(setq zetteldeft-link-indicator "[[")
+(setq zetteldeft-link-suffix "]]")
+#+end_src
+
+To make sure that your Markdown notes start with correct title syntax, customize the =zetteldeft-title-prefix=.
+
+#+begin_src emacs-lisp
+(setq zetteldeft-title-prefix "# ")
+#+end_src
+
+To highlight links you need to set up font-lock keywords for =markdown-mode=.
+
+#+begin_src emacs-lisp
+(font-lock-add-keywords 'markdown-mode
+   `((,zetteldeft-id-regex
+      . font-lock-warning-face)))
+#+end_src
+
+Alternatively, if you want to highlight the brackets as well, you need to escape them like so:
+
+#+begin_src emacs-lisp
+(font-lock-add-keywords 'markdown-mode
+   `((,(concat "\\[\\["
+               zetteldeft-id-regex
+               "\\]\\]")
+      . font-lock-warning-face)))
+#+end_src
+

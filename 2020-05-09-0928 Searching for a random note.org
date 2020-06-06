@@ -1,0 +1,34 @@
+#+title: Searching for a random note
+# Tags #zd-expansion #zetteldeft #zd-tutorial
+
+Backlink: §2020-04-17-1605 Expansions HUB
+
+Sometimes it's nice to wander.
+
+The following feature was [[https://github.com/EFLS/zetteldeft/issues/53][suggested by erictleung]].
+
+#+begin_quote
+In using =org-brain=, I really liked its wander feature, which brings a note randomly.
+It essentially randomly samples the notes created and displays it.
+This can be helpful as an informal 'quiz' of your knowledge base or at least refresh your memory that the particular note exists.
+From there you can edit it with current knowledge or link it to other notes.
+#+end_quote
+
+He proposed a function to do so, which is edited and shared below.
+
+It will pop open the deft buffer, pick a random zetteldeft ID, and enter it as a search string.
+
+#+begin_src emacs-lisp :results silent
+(defun zetteldeft-wander ()
+  "Wander through `zetteldeft' notes.
+Search `deft' for a random `zetteldeft' id."
+  (interactive)
+  (switch-to-buffer deft-buffer)
+  (let ((all-files (deft-find-all-files-no-prefix)))
+    (deft-filter
+      (zetteldeft--lift-id
+        (nth (random (length all-files))
+           all-files)))))
+#+end_src
+
+I'd run this after being in the deft buffer. So after running deft (C-c d d), I'd run the above etl/zetteldeft-ergodic which will randomly retrieve a random note ID and search for it.

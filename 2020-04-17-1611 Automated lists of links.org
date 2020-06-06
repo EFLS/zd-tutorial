@@ -1,0 +1,60 @@
+#+title: Automated lists of links
+# Tags #zetteldeft #zd-tutorial #zd-expansion
+
+Backlink: §2020-04-17-1605 Expansions HUB
+
+Zetteldeft can generate lists of notes based on search terms, see §2020-04-17-1608.
+
+To make updating these lists a little more convenient, you can create a function that you can then call straight from an org codeblock.
+
+First, let's create an additional function:
+
+#+begin_src emacs-lisp :results silent
+(defun efls/zetteldeft-links (str &optional missing)
+  "Crude attempt to automate `zetteldeft-insert-list-links-missing'.
+Meant to be called from a source block.
+Replaces the list below the block with an updated list.
+When MISSING is t, use `zetteldeft-insert-list-links-missing'."
+  (save-excursion
+    (org-forward-element)
+    ; Delete any existing list
+    (when (org-in-item-p) (delete-region (point) (org-end-of-item-list)))
+    ; New line & insert links
+    (if missing
+        (progn 
+          (save-buffer)
+          (deft-refresh)
+          (zetteldeft-insert-list-links-missing str))
+      (zetteldeft-insert-list-links str))
+    (org-return-indent)
+    (insert (current-time-string) "\n\n")))
+#+end_src
+
+Like it says in the doc string, this function is meant to be called from an org code block.
+Try it for yourself by first executing the block above, and then the one below (with =C-c C-c=).
+
+#+begin_src emacs-lisp :results silent
+(efls/zetteldeft-links "#zetteldeft")
+#+end_src
+
+Neat huh?
+
+To further automate this, we can introduce a final function that generates the code block above.
+It asks for a search term and then generates the source block.
+
+#+begin_src emacs-lisp :results silent
+(defun efls/zetteldeft-links-codeblock (str)
+  "Ask for a STR to search, and insert an org-mode
+source block that calls `efls/zetteldeft-links'.
+When called with a prefix, pass t to said function."
+  (interactive
+    (list (read-string "Search: ")))
+  (newline)
+  (insert "#+BEGIN_SRC emacs-lisp :results silent\n"
+          "(efls/zetteldeft-links \"" str"\"")
+  (when current-prefix-arg (insert " t"))
+  (insert ")\n"
+          "#+END_SRC\n"))
+#+end_src
+
+And with a prefix, it makes sure only missing links are added (by calling =zetteldeft-insert-list-links-missing=).

@@ -1,0 +1,43 @@
+#+title: Integration with org-link
+# Tags #zd-expansion #zetteldeft
+
+Backlink: §2020-04-17-1605 Expansions HUB
+
+For further integration with =org-mode=, we can create a new type of link.
+Let's call it =zdlink=.
+
+Links should be formatted like so: =[[zdlink:2020-04-17-1605][link]]=.
+Which results in the following [[zdlink:2020-04-17-1605][link]].
+
+Please *note*: deft should be loaded for this to work.
+
+First, we define =org-link= parameters.
+
+#+BEGIN_SRC emacs-lisp :results silent
+(org-link-set-parameters
+  "zdlink"
+  :follow (lambda (str) (zetteldeft--search-filename (zetteldeft--lift-id str)))
+  :complete 'efls/zd-complete-link
+  :help-echo "Searches provided ID in zetteldeft")
+#+END_SRC
+
+This tells =org= about a new type of link and what to do with it:
+find a zetteldeft ID in the link string, and search for it.
+
+This means that the link will work as long as there is a zetteldeft-id-regex in it,
+which implies that this, too, will work: =[[zdlink:2020-04-17-1605 Expansions HUB.org][link]]=.
+
+For convenience, we can create a small completion function.
+
+#+BEGIN_SRC emacs-lisp :results silent
+(defun efls/zd-complete-link ()
+  "Link completion for `tslink' type links"
+  (let* ((file (completing-read "File to link to: "
+                (deft-find-all-files-no-prefix)))
+         (link (zetteldeft--lift-id file)))
+     (unless link (user-error "No file selected"))
+     (concat "zdlink:" link)))
+#+END_SRC
+
+Now when =org-insert-link= is called, simply select =zdlink= from the list, and a completion window will pop up.
+

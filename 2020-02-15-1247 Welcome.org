@@ -1,0 +1,29 @@
+#+title: Welcome
+# Tags #zetteldeft #zd-tutorial
+
+Welcome to Zetteldeft, the note linking system on top of Deft.
+Using Zetteldeft allows you to create a set of interlinked notes, thus implementing a Zettelkasten like system.
+
+You are now reading the Zetteldeft tutorial.
+
+If don't already have Zetteldeft installed, please take a look at the README (§2020-01-05-2214) first.
+
+To continue this tutorial, please make sure the Deft directory is set to the directory where this file resides, by executing the code below (simply hit =C-c C-c= in it):
+
+#+begin_src emacs-lisp :results silent
+(setq deft-directory default-directory)
+(deft)
+(deft-refresh)
+#+end_src
+
+The one keybinding you need to know to get started, is =C-c d f= (or =zetteldeft-follow-link=), to select links to follow.
+
+With this knowledge, you are ready to read on.
+
+You could
+ - learn the basic Zetteldeft commands (§2020-02-15-1626),
+ - look at Zetteldeft ID and link concepts (§2020-05-10-1552),
+ - maybe read up on Zetteldeft history (§2020-02-14-2240),
+ - check out more commands (§2020-04-27-2348),
+ - look at some advanced features (§2020-04-27-2358),
+ - or learn how to customize your Zetteldeft (§2020-05-13-1815).

@@ -1,0 +1,27 @@
+#+TITLE: Customize link IDs
+# Tags #zd-tutorial #customize
+
+Backlink: §2020-05-13-1815 Customizing Zetteldeft
+
+This note is on link IDs.
+For customization of links, see note §2020-05-15-0908.
+
+Different Zettelkasten use different types of identifiers to refer to notes.
+Luhmann (§2020-02-07-2328) relied on an intricate naming scheme to string his physical notes together and to be able to refer to them.
+Digital Zettelkasten often use IDs generated based on time.
+
+By default, Zetteldeft uses =%Y-%m-%d-%H%M= to generate *IDs* for new notes.
+This can be changed by customizing =zetteldeft-id-format=.
+Its value should be a string with placeholders accepted by the =format-time-string= function.
+
+To detect these IDs as such, Zetteldeft uses a regular expression.
+This is stored in =zetteldeft-id-regex=.
+When you change the =zetteldeft-id-format=, you need to change this regex accordingly.
+
+This regular expression is =[0-9]{4}(-[0-9]{2,}){3}=.
+This means that, by default, it looks for: a set of four digit, followed by three sets of hyphens and at least 2 digits each.
+
+Note that the actual value of =zetteldeft-id-regex= as a string is =[0-9]\\{4\\}\\(-[0-9]\\{2,\\}\\)\\{3\\}=, as we need to use =\\='s to escape the =(= =)= ={= =}= brackets.
+
+Tip: use Emacs' interactive =re-builder= to construct your regular expressions.
+

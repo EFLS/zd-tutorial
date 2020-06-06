@@ -1,0 +1,14 @@
+#+title: Zetteldeft and spacemacs
+# Tags #zd-tutorial
+# Backlink §2020-01-05-2214
+
+To install Zetteldeft for spacemacs, simply add the Deft layer to your =.spacemacs= file and enable =zetteldeft= support.
+
+Locate =dotspacemacs-configuration-layers= in your =.spacemacs= and add the variables as suggested below.
+
+#+BEGIN_SRC emacs-lisp :tangle no
+(setq-default dotspacemacs-configuration-layers
+  '((deft :variables deft-zetteldeft t)))
+#+END_SRC
+
+This should install both =deft= and =zetteldeft= and load them in correct order, and set default keybindings.

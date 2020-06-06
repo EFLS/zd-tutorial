@@ -1,0 +1,16 @@
+#+title: The zetteldeft idea
+# Tags: #zetteldeft
+# Back link §2020-02-15-1247
+
+Starting from =deft=, a Zettelkasten system needs:
+ - links between notes that are easy to make and easy to follow
+ - a system for =#tags= and a way to generate an index
+
+What would be handy:
+ - auto completion for links to other notes
+ - a generated list of tags, perhaps with auto-completion
+
+Importantly, the Zettelkasten should
+ - be human readable
+ - prevent lock-in
+

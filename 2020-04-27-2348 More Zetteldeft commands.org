@@ -1,0 +1,25 @@
+#+title: More Zetteldeft commands
+# Tags #zetteldeft #zd-tutorial
+
+Once you are familiar with the basics (§2020-02-15-1626), it's time to learn some additional commands.
+
+When navigating your Zettelkasten, you might want to open a link in *another window*.
+Rather than hitting =C-c d f=, use =C-c d F= (which is =zetteldeft-avy-file-search-ace-window=).
+It will split the window if you only have one window open, follow the link in the other if you have two windows, or prompt you to pick a window in which to open the destination if you have more than two.
+
+Open a Deft search for a *tag* with =C-c d t= (for =zetteldeft-avy-tag-search=).
+Forgotten which tags are in use?
+Generate an overview with =C-c d T= (for =zetteldeft-tag-buffer=), which will create a new buffer listing all of your tags.
+
+Because all links are kept in plain text, it can be useful to use Deft to search full text for an ID.
+For example, with =C-c d c= (which calls =zetteldeft-search-current-id=) you search Deft with the note ID you are currently visiting.
+This allows you to quickly identify which notes link to the *current* note.
+
+Let's say you've created a note, but later want to *rename* it.
+With =C-c d r= (or =zetteldeft-file-rename=) you can.
+It will even change the =#TITLE:= declaration at the top of your note.
+
+Finally, you may want to check how many *words* your Zettelkasten contains, with =C-c d x= (or =zetteldeft-count-words=).
+
+But wait, there's more!
+For some more advanced Zetteldeft features, hop over to §2020-04-27-2358.

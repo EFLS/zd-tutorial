@@ -1,0 +1,22 @@
+#+title: Creating graphs
+# Tags #zd-advanced #zd-tutorial #zetteldeft
+
+Beware, this is an experimental feature.
+
+Assuming you have =graphviz= installed, you can generate vizualisations of connections between notes.
+
+Hit =zetteldeft-org-graph-note= to start from a single note, or =zetteldeft-org-graph-search= to enter a search term.
+
+Try it for yourself!
+Move point to the empty space below, hit =zetteldeft-org-graph-search=, and enter =#zetteldeft=.
+Execute the resulting code block, and then open the generated file.
+
+
+
+The result should be a PDF with connected nodes.
+
+Please note that you should remove the code block afterwards (or store it outside of your Zetteldeft directory), so that the links inside the code block are not detected the next time you try to create a graph.
+
+An additional tip: the search string can be empty to graph /all/ notes in Zetteldeft
+
+For more details, refer to =zetteldeft.org= and look for "Creating visuals".

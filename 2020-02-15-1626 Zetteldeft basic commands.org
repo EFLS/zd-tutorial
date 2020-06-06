@@ -1,0 +1,23 @@
+#+title: Zetteldeft basic commands
+# Tags #zetteldeft #zd-tutorial
+
+Backlink: §2020-02-15-1247 Welcome
+
+To get started with Zetteldeft, lets take a look at some basic commands.
+
+If you come from the "Welcome" note (§2020-02-15-1247), you already know that you can *follow links* with =C-c d f= (or =zetteldeft-follow-link=).
+This function will open the link your point is at, or will prompt you for a link to follow via =avy= keys.
+Use =C-c d F= to open the link in a new window (see §2020-04-27-2348).
+
+To directly *open* one of the notes in your Zettelkasten, hit =C-c d o= (or =zetteldeft-find-file=) and search among the titles.
+
+You can *create* a new note with =C-c d n= (or =zetteldeft-new-file=).
+Enter a title and you're good to go.
+
+Often though, you'll want to branch out from an existing file: create a new note and link to it at once.
+Hit =C-c d N= to do exactly that (which is a keybinding for =zetteldeft-new-file-and-link=).
+
+That's enough to get you started.
+Once you get the hang of it, take a look at §2020-04-27-2348 for more commands and keybindings.
+
+If you prefer learning about IDs and links first, look at §2020-05-10-1552.

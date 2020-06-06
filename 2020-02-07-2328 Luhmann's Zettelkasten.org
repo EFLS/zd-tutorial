@@ -1,0 +1,40 @@
+#+title: Luhmann's Zettelkasten
+# Tags #luhmann #zetteldeft
+
+Backlink §2020-02-14-2240 Zetteldeft history
+
+The notes below are very much work in progress.
+
+German sociologist Niklas Luhmann is the original Zettelkasten thinker and tinkerer.
+He used an intricate system of naming paper notes and making links between them, long before Personal Computers appeared.
+
+Johannes F.K. Schmidt (2018, §2020-05-21-1615) is studying Luhmanns' second iteration of his Zettelkasten.
+He explains that it "consists of approximately 67,000 cards, including a sizeable but obviously incomplete bibliographical apparatus with roughly 15,000 references and a keyword index with 3,200 entries."
+
+Luhmann worked on, with and in his system from 1963 until his death in 1997.
+According to Luhmann, his Zettelkasten served him above all "as a research or thinking tool".
+
+Schmidt writes:
+
+#+begin_quote
+This is not only true in terms of the proposition that the file acted as a communication partner in the research process but also in regard to the fact that in Luhmann's mind the process of writing things down enables disciplined thinking in the first place:
+"Underlying the filing technique is the experience that without /writing, there is no thinking/."
+#+end_quote
+
+That final quote of Luhmann is an important piece of advice: a living note taking system requires writing as input for it to think.
+It requires work, it requires writing, reading, writing again and reading again, and so on.
+
+For Luhmann, his Zettelkasten was a system that could talk back.
+Or, in his words, "communicate" (although it should be noted that his understanding of communication is very different from our everyday use of the word).
+
+# Idea's below could be split off into separate note
+It is important to pay more attention to the /physical/ characteristic that is Luhmann's system.
+To us contemporary readers, a "link" is an evident concept, albeit invisible.
+You can click on a link and it leads you to a destination, but you don't get to see the link id itself.
+
+With physical notes, this link ID needs to be read and "manually" followed, which in turn requires the Zettelkasten user to perform specific tasks that are forgotten in any digital system.
+(See §2020-02-07-2349 about Zettelkasten on paper)
+
+Each note could link to others, but received itself a number to point out where it sprouted.
+A note going from =1= to =2= simply adds more information to its idea, but by adding an =a= and writing =1a= on a new slip of paper, it could branch out.
+The result is an intricate system of interlinked notes.

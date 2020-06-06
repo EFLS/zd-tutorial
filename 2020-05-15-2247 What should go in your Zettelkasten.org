@@ -1,0 +1,26 @@
+#+TITLE: What should go in your Zettelkasten
+# Tags #zd-tutorial #zetteldeft #zk #todo
+
+A common and recurring question is: What should I keep in my Zettelkasten?[fn:zkd]
+Should I include any and all pieces of information, including bank statements and things to do?
+
+With the caveat that this distinction between what does or doesn't belong in your Zettelkasten will (and should) be different for everyone, I want to share my opinion on the matter.
+
+I reserve my ZK for those bits of knowledge that are of intellectual relevance to me -- either because they are interesting, because they relate to my intellectual endeavours, or because it is information that I want to return to on an intellectual rather than a practical level.
+
+Relatedly, I try to put information in there that is of "timeless" relevance, so to speak -- so no plans, todo's or lists of books to read.
+All that stuff, including the practical information you refer to, I store elsewhere.
+(On a sidenote: this doesn't mean that your notes shouldn't change. To the contrary, notes should very much be "living things", continuously being reworked and expanded upon.)
+
+The important thing is this: when I browse through my notes, I want to find and encounter stuff that feels valuable according to the characteristics I mentioned above.
+All the rest, all of the practical stuff, simply feels like clutter.
+
+A different way to convey this: consider your ZK as a communication partner that you can have a conversation with.
+Do you want to talk about bills and plans?
+Or do you want to talk about ideas and concepts?
+
+
+[fn:zkd] Asked here, for example, on the [[https://forum.zettelkasten.de/discussion/1097/limits-of-zettelkasten][zettelkasten.de forums]].
+The answer I gave there is the basis of this note here.
+
+

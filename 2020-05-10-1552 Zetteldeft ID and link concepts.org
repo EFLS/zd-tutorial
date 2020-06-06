@@ -1,0 +1,25 @@
+#+title: Zetteldeft ID and link concepts
+# Tags #zd-tutorial #zetteldeft
+
+Backlink: §2020-02-15-1247 Welcome
+
+Each note has a unique *ID*, based on the time and date of its creation.
+This note has ID =2020-05-10-1552=.
+
+A note's ID is included in its filename.
+IDs are supposed to be stable and shouldn't change.
+
+How IDs are generated is determined by =zetteldeft-id-format=.
+They are detected via the regular expression stored in =zetteldeft-id-regex=.
+Both are customizable (see §2020-05-13-1815 on customizing Zetteldeft).
+
+Notes contain *links* to other notes.
+To identify links, Zetteldeft uses a link indicator, which is =§= by default.
+Links thus consist of this symbol and an ID.
+And don't worry, you won't have to type the =§= manually.
+
+This symbol can be modified via =zetteldeft-link-indicator=.
+Want to disable it? Set it to an empty string: =""=.
+
+Finally, links can have a =zetteldeft-link-suffix= (but this is disabled by default).
+This can be handy if you want to use Zetteldeft for Markdown notes (see §2020-04-17-1532).

@@ -1,0 +1,13 @@
+#+title: Exercise Zettelkasten on paper
+# Tags #zetteldeft
+# Parent §2020-02-07-2328
+
+I encourage everyone who tries to implement a Zettelkasten type of note taking system to do the following exercise, a way to get a different feel of it.
+
+1. Take a small notepad, preferably with disposable pages
+2. Number the first 20 pages
+3. Title page 1 "Overview"
+4. Start writing todo's & notes on the subsequent pages
+5. Each time you add a note, add a link to your "Overview" on page 1
+
+Of course this is not a Zettelkasten system, but an exercise like this underscores both how easy it is to get started with a note-taking system like this, and how powerful such a plain approach is.

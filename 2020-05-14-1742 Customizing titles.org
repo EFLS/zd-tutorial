@@ -1,0 +1,23 @@
+#+title: Customizing titles
+# Tags #zd-tutorial #customize
+
+Backlink: §2020-05-13-1815 Customizing Zetteldeft
+
+When creating a new note, Zetteldeft will insert the =zetteldeft-title-prefix= string, which is Org-mode's =#+TITLE:= by default.
+
+This string is also used when you rename notes with =zetteldeft-file-rename=.
+
+For Markdown (§2020-04-17-1532), set it =#=.
+Don't forget to include a space at the end of the string.
+
+A note's title is appended by the =zetteldeft-title-suffix= string (but is empty by default).
+If you customize this, don't forget to add =\n= at the beginning to start a new line.
+
+I use 
+
+#+begin_src emacs-lisp
+(setq zetteldeft-title-suffix "\n# Tags #")
+#+end_src
+
+This way, that I am reminded to include tags.
+

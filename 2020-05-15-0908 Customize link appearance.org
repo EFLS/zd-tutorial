@@ -1,0 +1,17 @@
+#+TITLE: Customize link appearance
+# Tags #zd-tutorial #zettelkasten #customize
+
+Backlink: §2020-05-13-1815 Customizing Zetteldeft HUB
+
+This note is about customizing how links appear.
+To customize the format of IDs, see §2020-05-14-1740.
+
+By default, Zetteldeft prepends a =§=-symbol to IDs to create *links* (see §2020-03-30-0928 on the origins of this choice).
+
+To use something other than =§=, configure the =zetteldeft-link-indicator= to any other string.
+Change it to an empty string (i.e. =""=) to disable it altogether.
+
+You can also set a =zetteldeft-link-suffix= (empty by default) which will be appended to all inserted links.
+
+This is particularly useful to setup Zetteldeft for Markdown (§2020-04-17-1532).
+
