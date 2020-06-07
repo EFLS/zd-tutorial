@@ -31,4 +31,4 @@ Search `deft' for a random `zetteldeft' id."
            all-files)))))
 #+end_src
 
-I'd run this after being in the deft buffer. So after running deft (C-c d d), I'd run the above etl/zetteldeft-ergodic which will randomly retrieve a random note ID and search for it.
+I'd run this after being in the deft buffer. So after running deft (C-c d d), I'd run the above =(zetteldeft-wander)= which will randomly retrieve a random note ID and search for it.
