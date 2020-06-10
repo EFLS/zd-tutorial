@@ -9,7 +9,10 @@ If you use MELPA and =use-package=, installing is as easy as:
 
 #+begin_src emacs-lisp :results silent
 (use-package deft
-  :ensure t)
+  :ensure t
+  :init
+    (setq deft-extensions '("org" "md" "txt")
+          deft-use-filename-as-title t))
 
 (use-package zetteldeft
   :ensure t
