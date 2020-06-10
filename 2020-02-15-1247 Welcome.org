@@ -26,4 +26,5 @@ You could
  - maybe read up on Zetteldeft history (§2020-02-14-2240),
  - check out more commands (§2020-04-27-2348),
  - look at some advanced features (§2020-04-27-2358),
+ - expand Zetteldeft with code snippets (§2020-04-17-1605),
  - or learn how to customize your Zetteldeft (§2020-05-13-1815).
