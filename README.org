@@ -2,7 +2,7 @@
 
 This repository contains a collection of Org-mode files that provide an introduction to Zetteldeft.
 
-Clone this repository and open file =2020-01-05-2214 README.org= in Emacs to get started.
+Clone this repository and open file =2020-01-05-2214 START HERE.org= in Emacs to get started.
 Instructions on how to install Zetteldeft are included.
 
 #+begin_src
