@@ -6,7 +6,7 @@ Using Zetteldeft allows you to create a set of interlinked notes, thus implement
 
 You are now reading the Zetteldeft tutorial.
 
-If don't already have Zetteldeft installed, please take a look at the README (§2020-01-05-2214) first.
+If don't already have Zetteldeft installed, please take a look at the START HERE file (§2020-01-05-2214) first.
 
 To continue this tutorial, please make sure the Deft directory is set to the directory where this file resides, by executing the code below (simply hit =C-c C-c= in it):
 

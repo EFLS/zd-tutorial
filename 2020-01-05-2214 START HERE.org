@@ -1,4 +1,4 @@
-#+title: README
+#+title: START HERE
 # Tags #zd-tutorial #zetteldeft
 
 This is a tutorial for Zetteldeft, a Zettelkasten system on top of Deft.
