@@ -9,12 +9,13 @@ To make updating these lists a little more convenient, you can create a function
 
 First, let's create an additional function:
 
-#+begin_src emacs-lisp :results silent
-(defun efls/zetteldeft-links (str &optional missing)
+#+begin_src emacs-lisp
+(defun efls/zetteldeft-links (str &optional missing silent)
   "Crude attempt to automate `zetteldeft-insert-list-links-missing'.
 Meant to be called from a source block.
 Replaces the list below the block with an updated list.
-When MISSING is t, use `zetteldeft-insert-list-links-missing'."
+When MISSING is t, use `zetteldeft-insert-list-links-missing'.
+With MISSING as t, suppress the timestamp at the end."
   (save-excursion
     (org-forward-element)
     ; Delete any existing list
@@ -26,8 +27,9 @@ When MISSING is t, use `zetteldeft-insert-list-links-missing'."
           (deft-refresh)
           (zetteldeft-insert-list-links-missing str))
       (zetteldeft-insert-list-links str))
-    (org-return-indent)
-    (insert (current-time-string) "\n\n")))
+    (unless silent
+      (org-return-indent)
+      (insert (current-time-string) "\n"))))
 #+end_src
 
 Like it says in the doc string, this function is meant to be called from an org code block.
