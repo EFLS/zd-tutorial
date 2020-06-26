@@ -1,0 +1,26 @@
+#+title: Exporting with org-publish
+# Tags #zd-expansion #zetteldeft
+
+NOTE: The title of this note promisses more than you'll get out of it.
+
+Adding my notes folder for =org-publish=.
+
+#+begin_src emacs-lisp
+(add-to-list 'org-publish-project-alist
+  '("notes"
+    :base-directory "~/org/notes/"
+    :base-extension "org"
+    :publishing-directory "~/org/out/notes/"
+    :publishing-function org-html-publish-to-html
+  ; default pre- and postamble
+    :html-preamble nil
+    :html-postamble nil
+  ; html configuration
+    :html-doctype "html5"
+    :html-html5-fancy t
+    :html-head "<link rel='stylesheet' href='style.css' type='text/css'/>\n"
+  ; default headline level
+    :headline-levels 4))
+#+end_src
+
+Note that it exports to =~/org/out/notes/=.

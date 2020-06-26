@@ -5,14 +5,13 @@
 The tag =#zd-expansions= collects notes with snippets of code you can use to extend your Zetteldeft setup.
 
 #+BEGIN_SRC emacs-lisp :results silent
-(efls/zetteldeft-links "#zd-expansion")
+(efls/zetteldeft-links "#zd-expansion" nil 'silent)
 #+END_SRC
 
- - §2020-05-09-0928 Wandering to a random note
+ - §2020-06-26-2247 Exporting with org-publish
  - §2020-04-17-1611 Automated lists of links
+ - §2020-05-09-0928 Wandering to a random note
  - §2020-03-25-0928 Integration with org-link
-
-   Sat Jun  6 20:03:30 2020
 
 This list is generated semi-automatically thanks to the codeblock above.
 It relies on =zetteldeft-list-links= (see §2020-04-17-1608).
