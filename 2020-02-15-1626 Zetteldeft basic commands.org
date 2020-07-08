@@ -17,6 +17,9 @@ Enter a title and you're good to go.
 Often though, you'll want to branch out from an existing file: create a new note and link to it at once.
 Hit =C-c d N= to do exactly that (which is a keybinding for =zetteldeft-new-file-and-link=).
 
+To *add a link* to an existing note, hit =C-c d i= (or =zetteldeft-find-file-id-insert=) and select a note from the prompt.
+To include both the destination link and its title, use =C-c d I= (for =zetteldeft-find-file-full-title-insert).=
+
 That's enough to get you started.
 Once you get the hang of it, take a look at §2020-04-27-2348 for more commands and keybindings.
 
