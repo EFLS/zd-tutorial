@@ -17,7 +17,9 @@ This allows you to quickly identify which notes link to the *current* note.
 
 Let's say you've created a note, but later want to *rename* it.
 With =C-c d r= (or =zetteldeft-file-rename=) you can.
-It will even change the =#TITLE:= declaration at the top of your note.
+It will even change the =#TITLE:= declaration at the top of your note (or =zetteldeft-title-prefix=).
+What's more: if you rename an existing note /without/ a Zetteldeft ID in its filename, the rename function will generate one and include it in the new filename.
+You can use this feature to migrate existing notes into Zetteldeft (but beware of multiple notes with the same ID).
 
 Finally, you may want to check how many *words* your Zettelkasten contains, with =C-c d x= (or =zetteldeft-count-words=).
 
