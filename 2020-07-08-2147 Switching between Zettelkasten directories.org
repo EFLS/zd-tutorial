@@ -1,0 +1,57 @@
+#+title: Switching between Zettelkasten directories
+# Tags #zd-tutorial #zd-expansion
+
+This is a Zetteldeft expansion (see §2020-04-17-1605).
+
+First off: I'd advise /against/ keeping multiple sets of notes.
+A major idea of Zettelkasten is to generate structure /within/ your collection of ideas, not erecting barriers between them.
+
+That said, there could be fringe cases where you want to keep notes separate.
+If Zettelkästen are what you want -- the German plural of Zettelkasten -- then you could configure something like the following with the help of the [[https://github.com/abo-abo/hydra][amazing =hydra= package]].
+
+*Note* that the result is really separate: linking between the two Zettelkästen is impossible.
+Furthermore, attempting to merge different Zettelkästen with timebased identifiers can lead to problems.
+
+With those caveats out of the way, let's look at some code.
+First, define two functions that change the =deft-directory= and then run =deft-refresh=.
+
+#+begin_src emacs-lisp
+(defun zd-a ()
+  (interactive)
+  (deft)
+  (setq deft-directory "~/zd-a/")
+  (deft-refresh))
+
+(defun zd-b ()
+  (deft)
+  (interactive)
+  (setq deft-directory "~/zd-b/")
+  (deft-refresh))
+#+end_src
+
+If your Zettelkästen use different naming schemes, you can throw some additional =setq='s in there.
+
+Next, create a hydra for convenient swithcing between the two.
+
+#+begin_src emacs-lisp
+(defhydra zd-switch (:hints t :foreign-keys nil :exit t)
+  "Switch between Deft directories.
+"
+  ("a" zd-a "Zetteldeft dir A")
+  ("b" zd-b "Zetteldeft dir B")
+  ("q" nil "Quit"))
+#+end_src
+
+If you have large sets of notes, =deft-refresh= can take a while.
+One way to speed things up is to temporarily increase Emacs' garbage collection threshold.
+
+#+begin_src emacs-lisp
+(defun zd-dir-big ()
+  (interactive)
+  (let ((gc-cons-threshold most-positive-fixnum))
+    (deft)
+    (setq deft-directory "~/zd-big/")
+    (deft-refresh)))
+#+end_src
+
+The above is inspired by and cribbed from a discussion at [[https://github.com/EFLS/zetteldeft/issues/20][Zetteldeft's Github]].
