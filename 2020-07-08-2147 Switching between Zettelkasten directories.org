@@ -35,7 +35,7 @@ If your Zettelkästen use different naming schemes, you can throw some additiona
 Next, create a hydra for convenient swithcing between the two.
 
 #+begin_src emacs-lisp
-(defhydra zd-switch (:hints t :foreign-keys nil :exit t)
+(defhydra zd-switch (:foreign-keys nil :exit t)
   "Switch between Deft directories.
 "
   ("a" zd-a "Zetteldeft dir A")
