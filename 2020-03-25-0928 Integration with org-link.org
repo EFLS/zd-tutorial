@@ -31,7 +31,7 @@ For convenience, we can create a small completion function.
 
 #+BEGIN_SRC emacs-lisp :results silent
 (defun efls/zd-complete-link ()
-  "Link completion for `tslink' type links"
+  "Link completion for `zdlink' type links"
   (let* ((file (completing-read "File to link to: "
                 (deft-find-all-files-no-prefix)))
          (link (zetteldeft--lift-id file)))
