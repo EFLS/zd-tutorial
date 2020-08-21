@@ -1,5 +1,5 @@
 #+TITLE: What should go in your Zettelkasten
-# Tags #zd-tutorial #zetteldeft #zk #todo
+# Tags #zd-tutorial #zetteldeft #zettelkasten #wip
 
 A common and recurring question is: What should I keep in my Zettelkasten?[fn:zkd]
 Should I include any and all pieces of information, including bank statements and things to do?

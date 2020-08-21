@@ -1,5 +1,5 @@
 #+TITLE: Customize link appearance
-# Tags #zd-tutorial #zettelkasten #customize
+# Tags #zd-tutorial #zetteldeft #customize
 
 Backlink: §2020-05-13-1815 Customizing Zetteldeft HUB
 
