@@ -41,6 +41,9 @@ Try it for yourself by first executing the block above, and then the one below (
 
 Neat huh?
 
+As an aside: we can use this function to generate a list of backlinks (i.e., link to notes that link to the current note).
+See §2020-08-29-1223 for details.
+
 To further automate this, we can introduce a final function that generates the code block above.
 It asks for a search term and then generates the source block.
 
