@@ -1,0 +1,22 @@
+#+title: Automated list of backlinks
+# Tags #zetteldeft #zd-tutorial #zd-expansion
+
+Backlink: §2020-04-17-1605 Expansions HUB
+
+The =zetteldeft-insert-list-links= generates a list of links to notes with a specific search term (§2020-04-17-1608).
+By providing a notes ID as search string, the resulting list contains all notes linking to that note.
+
+This can be used to generate a list of backlinks.
+
+Building on to an automated list of links (§2020-04-17-1611), we can sort of automate this.
+
+To achieve this, simply provide =(zetteldeft--current-id)= as search term, like so:
+
+#+BEGIN_SRC emacs-lisp :results silent
+(efls/zetteldeft-links (zetteldeft--current-id) nil 'silent)
+#+END_SRC
+
+ - §2020-04-17-1611 Automated lists of links
+ - §2020-04-17-1605 Expansions HUB
+
+With =t= as a second argument, only notes that aren't linked to yet, are included in the list.
