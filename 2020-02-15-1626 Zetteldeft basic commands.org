@@ -10,6 +10,7 @@ This function will open the link your point is at, or will prompt you for a link
 Use =C-c d F= to open the link in a new window (see §2020-04-27-2348).
 
 To directly *open* one of the notes in your Zettelkasten, hit =C-c d o= (or =zetteldeft-find-file=) and search among the titles.
+For convenience, you might want to designate a home note to open with a shortcut, see §2020-09-20-2106 for more information.
 
 You can *create* a new note with =C-c d n= (or =zetteldeft-new-file=).
 Enter a title and you're good to go.

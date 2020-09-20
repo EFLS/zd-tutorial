@@ -1,0 +1,17 @@
+#+title: The home note
+# Backlink: §2020-02-15-1626 Zetteldeft basic commands
+# Tags #zetteldeft #zd-tutorial #customize
+
+A Zettelkasten system has no fixed single hierarchy, but it is often convenient to maintain a base or home note.
+Such a note provides structure: it can link to other notes, which in turn gathers links to notes on a specific theme.
+
+In any case, moving to the home note should be easy, which is where =zetteldeft-go-home= comes in, accessible with =C-c d h=.
+
+For this to work, you need to first store a note ID in =zetteldeft-home-id=.
+For this knowledge base, we could do the following:
+
+#+begin_src emacs-lisp
+(setq zetteldeft-home-id "2020-02-15-1247")
+#+end_src
+
+As long as you have configured something similar in your =.emacs=, =C-c d h= can be used to quickly return to base.
