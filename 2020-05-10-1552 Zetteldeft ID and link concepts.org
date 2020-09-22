@@ -21,5 +21,9 @@ And don't worry, you won't have to type the =§= manually.
 This symbol can be modified via =zetteldeft-link-indicator=.
 Want to disable it? Set it to an empty string: =""=.
 
-Finally, links can have a =zetteldeft-link-suffix= (but this is disabled by default).
+Links can have a =zetteldeft-link-suffix= (but this is disabled by default).
 This can be handy if you want to use Zetteldeft for Markdown notes (see §2020-04-17-1532).
+
+A backlink, finally, refers to a link back to another note from which the current note "branches out".
+In Zetteldeft, the main course of action is to add a single backlink via a function (see §2020-09-22-0855).
+With the power of automated lists of links, it is also possible to easily find all notes that link to the current note (see §2020-08-29-1223).
