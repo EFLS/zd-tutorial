@@ -1,6 +1,6 @@
 #+title: Zetteldeft and spacemacs
 # Tags #zd-tutorial
-# Backlink §2020-01-05-2214
+Backlink: §2020-01-05-2214
 
 To install Zetteldeft for spacemacs, simply add the Deft layer to your =.spacemacs= file and enable =zetteldeft= support.
 

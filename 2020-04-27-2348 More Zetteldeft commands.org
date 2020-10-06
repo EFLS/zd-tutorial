@@ -1,6 +1,8 @@
 #+title: More Zetteldeft commands
 # Tags #zetteldeft #zd-tutorial
 
+Backlink: §2020-02-15-1626 Zetteldeft basic commands
+
 Once you are familiar with the basics (§2020-02-15-1626), it's time to learn some additional commands.
 
 When navigating your Zettelkasten, you might want to open a link in *another window*.

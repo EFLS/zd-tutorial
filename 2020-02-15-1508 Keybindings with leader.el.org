@@ -1,6 +1,6 @@
 #+title: Keybindings with leader
 # Tags #zetteldeft
-# Backlink §2020-01-05-2214
+Backlink: §2020-01-05-2214
 
 If you use =general.el= and like to use leader keys, I suggest the following keybindings:
 

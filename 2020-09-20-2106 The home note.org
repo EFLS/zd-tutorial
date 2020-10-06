@@ -1,6 +1,7 @@
 #+title: The home note
-# Backlink: §2020-02-15-1626 Zetteldeft basic commands
 # Tags #zetteldeft #zd-tutorial #customize
+
+Backlink: §2020-02-15-1626 Zetteldeft basic commands
 
 A Zettelkasten system has no fixed single hierarchy, but it is often convenient to maintain a base or home note.
 Such a note provides structure: it can link to other notes, which in turn gathers links to notes on a specific theme.

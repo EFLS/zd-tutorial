@@ -2,6 +2,8 @@
 #+startup: hideblocks
 # Tags #zd-expansion #zetteldeft #zd-tutorial
 
+Backlink: §2020-02-15-1247 Welcome
+
 The tag =#zd-expansions= collects notes with snippets of code you can use to extend your Zetteldeft setup.
 
 #+BEGIN_SRC emacs-lisp :results silent
