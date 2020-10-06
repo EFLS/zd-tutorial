@@ -14,7 +14,6 @@ The tag =#zd-expansions= collects notes with snippets of code you can use to ext
  - §2020-04-17-1611 Automated lists of links
  - §2020-03-25-0928 Integration with org-link
  - §2020-07-08-2147 Switching between Zettelkasten directories
- - §2020-06-26-2247 Exporting with org-publish
  - §2020-05-09-0928 Wandering to a random note
 
 This list is generated semi-automatically thanks to the codeblock above.

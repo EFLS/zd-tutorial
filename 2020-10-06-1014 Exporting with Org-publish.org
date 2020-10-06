@@ -1,0 +1,50 @@
+#+title: Exporting with org-publish
+# Tags #zd-tutorial zd-advanced
+
+Backlink: §2020-02-15-1247 Welcome
+
+Exporting notes is one way to conveniently read them outside of Emacs.
+
+
+Zetteldeft provides functions to conveniently export notes.
+Exporting relies on Org-mode and the =org-publish= functions and revolves around =zetteldeft-export--prepare-tmp-notes=.[fn:md]
+
+This function copies notes to temporary directory =zetteldeft-export-tmp-dir= and replaces Zetteldeft links with file links in the process.
+Org-publish then export these temporary notes to, for example, HTML.
+
+*Note*: The current workflow only works with Org notes.
+Expanding this into Markdown should be easily achieved by modifying the preparation function.
+Get in touch if you'd like to attempt to do so.
+
+#+begin_src emacs-lisp :results silent
+(add-to-list 'org-publish-project-alist
+  `("zd-tutorial"
+    :preparation-function zetteldeft-export--prepare-tmp-notes
+    :base-directory ,zetteldeft-export-tmp-dir
+    :publishing-directory ,(expand-file-name "docs" default-directory)
+   ; publishing configuration
+    :base-extension "org"
+    :publishing-function org-html-publish-to-html
+   ; org config
+    :headline-levels 4
+    :with-tags nil
+    :with-toc nil
+    :with-date nil
+    :with-author nil
+   ; html config
+    :html-head-extra "<link rel='stylesheet' href='static/style.css' type='text/css'/>\n"
+    :html-preamble ,(with-temp-buffer
+                      (insert-file-contents 
+                        (expand-file-name "docs/static/html-preamble.html"
+                                          default-directory))
+                      (buffer-string))
+    :html-postamble nil))
+#+end_src
+
+Some pointers for people unfamiliar with Org-publish:
+ - =:publishing-directory= should be where you want your final notes to go
+ - =:html-head-extra= can be used to include styling
+ - =:html-preamble= is used here to include a header, but can safely be removed
+
+The Org exporting features will try to resolve all Org style links and halt if deems one is broken.
+To still be able to export, it is a good idea to set =org-export-with-broken-links= to =t=.

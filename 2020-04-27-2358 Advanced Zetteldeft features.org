@@ -7,5 +7,7 @@ There's more advanced features to explore!
 Generate a list of links for a certain search term (§2020-04-17-1608).
 Or create graphs with the help of =graphviz= (§2020-04-17-1552).
 
+Export your notes to HTML with Org-publish (§2020-10-06-1014).
+
 Wish to further enhance your Zetteldeft experience with additional code?
 Take a look at the Zetteldeft expansions (§2020-04-17-1605).

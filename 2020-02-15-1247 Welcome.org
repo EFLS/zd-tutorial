@@ -23,8 +23,9 @@ With this knowledge, you are ready to read on.
 You could
  - learn the basic Zetteldeft commands (§2020-02-15-1626),
  - look at Zetteldeft ID and link concepts (§2020-05-10-1552),
- - maybe read up on Zetteldeft history (§2020-02-14-2240),
  - check out more commands (§2020-04-27-2348),
+ - export your notes (§2020-10-06-1014),
+ - maybe read up on Zetteldeft history (§2020-02-14-2240),
  - look at some advanced features (§2020-04-27-2358),
  - expand Zetteldeft with code snippets (§2020-04-17-1605),
  - or learn how to customize your Zetteldeft (§2020-05-13-1815).
