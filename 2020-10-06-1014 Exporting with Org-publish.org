@@ -5,9 +5,8 @@ Backlink: §2020-02-15-1247 Welcome
 
 Exporting notes is one way to conveniently read them outside of Emacs.
 
-
 Zetteldeft provides functions to conveniently export notes.
-Exporting relies on Org-mode and the =org-publish= functions and revolves around =zetteldeft-export--prepare-tmp-notes=.[fn:md]
+Exporting relies on Org-mode and the =org-publish= functions and revolves around =zetteldeft-export--prepare-tmp-notes=.
 
 This function copies notes to temporary directory =zetteldeft-export-tmp-dir= and replaces Zetteldeft links with file links in the process.
 Org-publish then export these temporary notes to, for example, HTML.
