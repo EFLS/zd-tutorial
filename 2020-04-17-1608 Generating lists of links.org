@@ -10,6 +10,8 @@ It's best used in combination with =#tags=.
 
 Calling =zetteldeft-insert-list-links= prompts for a search term and will insert a list of links to the search results.
 
+To customize how such a list entry is formatted, set =zetteldeft-list-prefix= to a string of your choice.
+
 Sometimes, rather thang simply generating a list, I like to manually link to notes in the text, but then I wonder which notes I /haven't/ linked to yet.
 
 That's where =zetteldeft-insert-list-links-missing= comes in.
