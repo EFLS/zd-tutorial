@@ -23,6 +23,9 @@ It will even change the =#TITLE:= declaration at the top of your note (or =zette
 What's more: if you rename an existing note /without/ a Zetteldeft ID in its filename, the rename function will generate one and include it in the new filename.
 You can use this feature to migrate existing notes into Zetteldeft (but beware of multiple notes with the same ID).
 
+To find *dead links* in your Zetteldeft notes, call =zetteldeft-dead-links-buffer=.
+A new buffer will display links that have no destination.
+
 Finally, you may want to check how many *words* your Zettelkasten contains, with =C-c d x= (or =zetteldeft-count-words=).
 
 But wait, there's more!
