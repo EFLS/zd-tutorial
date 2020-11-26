@@ -9,9 +9,11 @@ When navigating your Zettelkasten, you might want to open a link in *another win
 Rather than hitting =C-c d f=, use =C-c d F= (which is =zetteldeft-avy-file-search-ace-window=).
 It will split the window if you only have one window open, follow the link in the other if you have two windows, or prompt you to pick a window in which to open the destination if you have more than two.
 
-Open a Deft search for a *tag* with =C-c d t= (for =zetteldeft-avy-tag-search=).
+See a tag in a note you'd like to search for?
+Quickly open a Deft search for it with =C-c d t= (for =zetteldeft-avy-tag-search=) and make your choice with =avy=.
 Forgotten which tags are in use?
-Generate an overview with =C-c d T= (for =zetteldeft-tag-buffer=), which will create a new buffer listing all of your tags.
+Use =C-c d /= (for =zetteldeft-search-tag=) to interactively select a tag and search for it.
+Or generate an overview of all tags in a new buffer with =C-c d T= (for =zetteldeft-tag-buffer=).
 
 Because all links are kept in plain text, it can be useful to use Deft to search full text for an ID.
 For example, with =C-c d c= (which calls =zetteldeft-search-current-id=) you search Deft with the note ID you are currently visiting.
