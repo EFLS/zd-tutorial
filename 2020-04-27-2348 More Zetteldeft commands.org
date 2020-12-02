@@ -5,6 +5,9 @@ Backlink: §2020-02-15-1626 Zetteldeft basic commands
 
 Once you are familiar with the basics (§2020-02-15-1626), it's time to learn some additional commands.
 
+First off, use =C-c d .= (for =zetteldeft-browse=) to enter a "follow link loop": select a link to follow with =avy=, similar to =zetteldeft-follow-link= but in repeat.
+Exit the loop with =ESC= or =C-g=.
+
 When navigating your Zettelkasten, you might want to open a link in *another window*.
 Rather than hitting =C-c d f=, use =C-c d F= (which is =zetteldeft-avy-file-search-ace-window=).
 It will split the window if you only have one window open, follow the link in the other if you have two windows, or prompt you to pick a window in which to open the destination if you have more than two.
