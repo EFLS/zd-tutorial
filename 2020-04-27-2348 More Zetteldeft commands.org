@@ -14,10 +14,9 @@ It will split the window if you only have one window open, follow the link in th
 
 See a tag in a note you'd like to search for?
 Quickly open a Deft search for it with =C-c d t= (for =zetteldeft-avy-tag-search=) and make your choice with =avy=.
-
 Forgotten which tags are in use?
 Generate an overview of all tags in a new buffer with =C-c d T= (for =zetteldeft-tag-buffer=).
-Or search for a tag by interactively selecting it from a list with  =C-c d /= (for =zetteldeft-search-tag=).
+For more on tags, see §2021-03-29-2226 Tags in Zetteldeft
 
 Because all links are kept in plain text, it can be useful to use Deft to search for an ID (rather than opening the note the ID belongs to).
 For example, with =C-c d c= (which calls =zetteldeft-search-current-id=) you search Deft with the note ID you are currently visiting.
