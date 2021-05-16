@@ -20,5 +20,8 @@ If, however, this variable is set to =nil=, tags will be inserted at point.
 Want to insert a tag at point even with =zetteldeft-tag-line-prefix= configured?
 Use =zetteldeft-tag-insert-at-point=.
 
+Easily remove a tag from the current note with =zetteldeft-tag-remove= (=C-c d $= by default).
+It will prompt for a tag used in the current note, and remove it (or rather, the first occurence in the current note).
+
 A note on customization: variable =zetteldeft-tag-regex= is used to /find/ tags, =zetteldeft-tag-prefix= for /inserting/ tags.
 To fully customize tag searching and inserting behaviour to your liking, you might have to modify both.
