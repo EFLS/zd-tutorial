@@ -1,0 +1,24 @@
+#+title: Tags in Zetteldeft
+# Tags #zd-tutorial #zetteldeft 
+
+Backlink: §2020-04-27-2348 More Zetteldeft commands
+
+Tags are a way to quickly retrieve a selection of notes (for example with =zetteldeft-search-tag=, or by §2020-04-17-1608 Generating lists of links).
+
+Tags can appear anywhere in your note.
+To be found, tags should start with =#= or =@= and can contain letterse, numbers, underscores and dashes.
+To customize this, set =zetteldeft-tag-regex=.
+
+See a tag you want to search for? Hit =C-c d t= (for =zetteldeft-avy-tag-search=) and make your choice.
+Or launch a search for a tag by interactively selecting it from a list with  =C-c d /= (for =zetteldeft-search-tag=).
+
+To generate an overview of all tags in your Zetteldeft, use =C-c d T= (for =zetteldeft-tag-buffer=).
+
+To quickly insert a tag, use =zetteldeft-tag-insert= (=C-c d #= by default).
+It will prompt for a tag to be added at the end of the first line that starts with =zetteldeft-tag-line-prefix= (which is =# Tags= by default).
+If, however, this variable is set to =nil=, tags will be inserted at point.
+Want to insert a tag at point even with =zetteldeft-tag-line-prefix= configured?
+Use =zetteldeft-tag-insert-at-point=.
+
+A note on customization: variable =zetteldeft-tag-regex= is used to /find/ tags, =zetteldeft-tag-prefix= for /inserting/ tags.
+To fully customize tag searching and inserting behaviour to your liking, you might have to modify both.

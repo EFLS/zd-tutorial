@@ -9,7 +9,7 @@ Let's call it =zdlink=.
 Links should be formatted like so: =[[zdlink:2020-04-17-1605][link]]=.
 Which results in the following [[zdlink:2020-04-17-1605][link]].
 
-Please *note*: deft should be loaded for this to work.
+Please *note*: Deft should be loaded for this to work.
 
 First, we define =org-link= parameters.
 
@@ -27,7 +27,9 @@ find a zetteldeft ID in the link string, and search for it.
 This means that the link will work as long as there is a zetteldeft-id-regex in it,
 which implies that this, too, will work: =[[zdlink:2020-04-17-1605 Expansions HUB.org][link]]=.
 
-For convenience, we can create a small completion function.
+To tell Zetteldeft to (almost) always insert these Org styled links, set the variable =zetteldeft-insert-link-function= to =zetteldeft-insert-link-org-style=.
+
+For convenience, we can also create a small completion function to facilitate inserting links with the =org-insert-link= function.
 
 #+BEGIN_SRC emacs-lisp :results silent
 (defun efls/zd-complete-link ()

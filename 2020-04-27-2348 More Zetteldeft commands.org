@@ -5,15 +5,20 @@ Backlink: §2020-02-15-1626 Zetteldeft basic commands
 
 Once you are familiar with the basics (§2020-02-15-1626), it's time to learn some additional commands.
 
+First off, use =C-c d .= (for =zetteldeft-browse=) to enter a "follow link loop": select a link to follow with =avy=, similar to =zetteldeft-follow-link= but in repeat.
+Exit the loop with =ESC= or =C-g=.
+
 When navigating your Zettelkasten, you might want to open a link in *another window*.
 Rather than hitting =C-c d f=, use =C-c d F= (which is =zetteldeft-avy-file-search-ace-window=).
 It will split the window if you only have one window open, follow the link in the other if you have two windows, or prompt you to pick a window in which to open the destination if you have more than two.
 
-Open a Deft search for a *tag* with =C-c d t= (for =zetteldeft-avy-tag-search=).
+See a tag in a note you'd like to search for?
+Quickly open a Deft search for it with =C-c d t= (for =zetteldeft-avy-tag-search=) and make your choice with =avy=.
 Forgotten which tags are in use?
-Generate an overview with =C-c d T= (for =zetteldeft-tag-buffer=), which will create a new buffer listing all of your tags.
+Generate an overview of all tags in a new buffer with =C-c d T= (for =zetteldeft-tag-buffer=).
+For more on tags, see §2021-03-29-2226 Tags in Zetteldeft
 
-Because all links are kept in plain text, it can be useful to use Deft to search full text for an ID.
+Because all links are kept in plain text, it can be useful to use Deft to search for an ID (rather than opening the note the ID belongs to).
 For example, with =C-c d c= (which calls =zetteldeft-search-current-id=) you search Deft with the note ID you are currently visiting.
 This allows you to quickly identify which notes link to the *current* note.
 
@@ -22,6 +27,9 @@ With =C-c d r= (or =zetteldeft-file-rename=) you can.
 It will even change the =#TITLE:= declaration at the top of your note (or =zetteldeft-title-prefix=).
 What's more: if you rename an existing note /without/ a Zetteldeft ID in its filename, the rename function will generate one and include it in the new filename.
 You can use this feature to migrate existing notes into Zetteldeft (but beware of multiple notes with the same ID).
+
+To find *dead links* in your Zetteldeft notes, call =zetteldeft-dead-links-buffer=.
+A new buffer will display links that have no destination.
 
 Finally, you may want to check how many *words* your Zettelkasten contains, with =C-c d x= (or =zetteldeft-count-words=).
 

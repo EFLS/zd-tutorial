@@ -26,3 +26,4 @@ That's enough to get you started.
 Once you get the hang of it, take a look at §2020-04-27-2348 for more commands and keybindings.
 
 If you prefer learning about IDs and links first, look at §2020-05-10-1552.
+For information on tags, see §2021-03-29-2226.

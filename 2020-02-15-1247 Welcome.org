@@ -8,7 +8,7 @@ You are now reading the Zetteldeft tutorial.
 
 If don't already have Zetteldeft installed, please take a look at the START HERE file (§2020-01-05-2214) first.
 
-To continue this tutorial, please make sure the Deft directory is set to the directory where this file resides, by executing the code below (simply hit =C-c C-c= in it):
+To continue this tutorial, please make sure the Deft directory is set to the directory where this file resides, by executing the code below (simply hit =C-c C-c= in the source block below):
 
 #+begin_src emacs-lisp :results silent
 (setq deft-directory default-directory)
