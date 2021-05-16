@@ -23,6 +23,7 @@ With this knowledge, you are ready to read on.
 You could
  - learn the basic Zetteldeft commands (§2020-02-15-1626),
  - look at Zetteldeft ID and link concepts (§2020-05-10-1552),
+ - learn how to use tags (§2021-03-29-2226),
  - check out more commands (§2020-04-27-2348),
  - export your notes (§2020-10-06-1014),
  - maybe read up on Zetteldeft history (§2020-02-14-2240),

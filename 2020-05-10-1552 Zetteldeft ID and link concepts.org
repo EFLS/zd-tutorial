@@ -18,7 +18,7 @@ To identify links, Zetteldeft uses a link indicator, which is =§= by default.
 Links thus consist of this symbol and an ID.
 And don't worry, you won't have to type the =§= manually.
 
-This symbol can be modified via =zetteldeft-link-indicator=.
+Even better: the symbol can be modified via =zetteldeft-link-indicator=.
 Want to disable it? Set it to an empty string: =""=.
 
 Links can have a =zetteldeft-link-suffix= (but this is disabled by default).
