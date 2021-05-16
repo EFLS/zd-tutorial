@@ -1,7 +1,7 @@
 #+title: Tags in Zetteldeft
 # Tags #zd-tutorial #zetteldeft 
 
-Backlink: §2020-04-27-2348 More Zetteldeft commands
+Backlink: §2020-02-15-1247 Welcome
 
 Tags are a way to quickly retrieve a selection of notes (for example with =zetteldeft-search-tag=, or by §2020-04-17-1608 Generating lists of links).
 
