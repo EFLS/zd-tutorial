@@ -3,11 +3,11 @@
 
 Backlink: §2020-04-27-2348 More Zetteldeft commands
 
-Tags are a way to quickly retrieve a subsection of notes (for example with §2020-04-17-1608 Generating lists of links).
+Tags are a way to quickly retrieve a selection of notes (for example with =zetteldeft-search-tag=, or by §2020-04-17-1608 Generating lists of links).
 
 Tags can appear anywhere in your note.
 To be found, tags should start with =#= or =@= and can contain letterse, numbers, underscores and dashes.
-To customize this behaviour, set =zetteldeft-tag-regex=.
+To customize this, set =zetteldeft-tag-regex=.
 
 See a tag you want to search for? Hit =C-c d t= (for =zetteldeft-avy-tag-search=) and make your choice.
 Or launch a search for a tag by interactively selecting it from a list with  =C-c d /= (for =zetteldeft-search-tag=).
