@@ -6,6 +6,9 @@ Backlink: §2020-04-27-2348 More Zetteldeft commands
 
 There's more advanced features to explore!
 
+If you want to create a note starting from a region with selected text, use =zetteldeft-extract-region-to-note=.
+The region will be replaced with a link to the new note.
+
 Generate a list of links for a certain search term (§2020-04-17-1608).
 Or create graphs with the help of =graphviz= (§2020-04-17-1552).
 
