@@ -4,12 +4,16 @@
 Backlink: §2020-05-10-1552 Zetteldeft ID and link concepts
 
 A backlink can be used to refer back to "parent" note, from which the current note branches out.
+It appears on a single line and contains a prefix string, a note link, and a title.
 
-Use =zetteldeft-backlink-add= (or =C-c d b=) to pick a note.
-The function will then include a link at the top of your current note, right below the title.
+Use =zetteldeft-backlink-add= (or =C-c d b=) to pick a note to backlink to.
+The function will then include a link at the top of your current note.
 
 This backlink is prepended with =zetteldeft-backlink-prefix=, which can be a custom string.
 
-To create a new note and include a backlink to the previous note in one go, use =zetteldeft-new-file-and-backlink= (or =C-c d B=).
+For customizations on where in the current buffer the backlink should be inserted, customize =zetteldeft-backlink-location-function=.
+See the documentation for details.
+
+To create a new note and include a backlink to the current note in one go, use =zetteldeft-new-file-and-backlink= (or =C-c d B=).
 
 If, rather than a single backlink, you want to find all notes linking to the current note, take a look at §2020-08-29-1223 Automated list of backlinks.
