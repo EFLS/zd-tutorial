@@ -1,65 +1,27 @@
 #+title: Automated lists of links
-# Tags #zetteldeft #zd-tutorial #zd-expansion
+# Tags #zetteldeft #zd-tutorial #zd-advanced
 
-Backlink: §2020-04-17-1605 Expansions HUB
+Backlink: §2020-04-17-1608 Generating a list of links
 
 Zetteldeft can generate lists of notes based on search terms, see §2020-04-17-1608.
 
-To make updating these lists a little more convenient, you can create a function that you can then call straight from an org codeblock.
+To make updating these lists a little more convenient, you can do this from an Org source block in order to easily update the resulting list.
+This is what =zetteldeft-list-links= is for.
+It is meant to be called from an Org source block and will update the list of links (by hitting =C-c C-c= in it).
 
-First, let's create an additional function:
-
-#+begin_src emacs-lisp
-(defun efls/zetteldeft-links (str &optional missing silent)
-  "Crude attempt to automate `zetteldeft-insert-list-links-missing'.
-Meant to be called from a source block.
-Replaces the list below the block with an updated list.
-When MISSING is t, use `zetteldeft-insert-list-links-missing'.
-With MISSING as t, suppress the timestamp at the end."
-  (save-excursion
-    (org-forward-element)
-    ; Delete any existing list
-    (when (org-in-item-p) (delete-region (point) (org-end-of-item-list)))
-    ; New line & insert links
-    (if missing
-        (progn 
-          (save-buffer)
-          (deft-refresh)
-          (zetteldeft-insert-list-links-missing str))
-      (zetteldeft-insert-list-links str))
-    (unless silent
-      (org-return-indent)
-      (insert (current-time-string) "\n"))))
-#+end_src
-
-Like it says in the doc string, this function is meant to be called from an org code block.
-Try it for yourself by first executing the block above, and then the one below (with =C-c C-c=).
+For an example , take a look at the following source block and the list it generates:
 
 #+begin_src emacs-lisp :results silent
-(efls/zetteldeft-links "#zetteldeft")
+(zetteldeft-list-links "#zd-advanced")
 #+end_src
+
+ - §2020-04-17-1608 Generating lists of links
+ - §2020-04-17-1552 Creating graphs
 
 Neat huh?
 
+To insert such a block, use =zetteldeft-insert-list-links-block=.
+It will prompt for a search string.
+
 As an aside: we can use this function to generate a list of backlinks (i.e., link to notes that link to the current note).
 See §2020-08-29-1223 for details.
-
-To further automate this, we can introduce a final function that generates the code block above.
-It asks for a search term and then generates the source block.
-
-#+begin_src emacs-lisp :results silent
-(defun efls/zetteldeft-links-codeblock (str)
-  "Ask for a STR to search, and insert an org-mode
-source block that calls `efls/zetteldeft-links'.
-When called with a prefix, pass t to said function."
-  (interactive
-    (list (read-string "Search: ")))
-  (newline)
-  (insert "#+BEGIN_SRC emacs-lisp :results silent\n"
-          "(efls/zetteldeft-links \"" str"\"")
-  (when current-prefix-arg (insert " t"))
-  (insert ")\n"
-          "#+END_SRC\n"))
-#+end_src
-
-And with a prefix, it makes sure only missing links are added (by calling =zetteldeft-insert-list-links-missing=).

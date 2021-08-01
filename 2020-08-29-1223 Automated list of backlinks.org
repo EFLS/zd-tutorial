@@ -1,0 +1,26 @@
+#+title: Automated list of backlinks
+# Tags #zetteldeft #zd-tutorial #zd-advanced
+
+Backlink: §2020-04-27-2358 Advanced Zetteldeft features
+
+See also the note on manual backlinks (§2020-09-22-0855).
+
+Taking a look at notes that link to the current note is easy with =C-c d c= (or =zetteldeft-search-current-id=).
+But what if you want to include this list in the note itself?
+
+The =zetteldeft-insert-list-links= generates a list of links to notes with a specific search term (§2020-04-17-1608).
+By providing a note's ID as search string, the resulting list contains all notes linking to the current note.
+
+This can be used to generate a list of backlinks.
+Building on to an automated list of links (§2020-04-17-1611), we can sort of automate this:
+
+#+BEGIN_SRC emacs-lisp :results silent
+(zetteldeft-list-links (zetteldeft--current-id))
+#+END_SRC
+
+ - §2020-04-17-1611 Automated lists of links
+ - §2020-09-22-0855 Backlinks
+ - §2020-05-10-1552 Zetteldeft ID and link concepts
+ - §2020-04-17-1605 Expansions HUB
+
+You could provide =t= as a second argument to the called function, so that only notes that aren't linked to yet are included in the list.

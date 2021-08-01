@@ -10,10 +10,8 @@ The tag =#zd-expansions= collects notes with snippets of code you can use to ext
 (efls/zetteldeft-links "#zd-expansion" nil 'silent)
 #+END_SRC
 
- - §2021-04-03-2209 Turn org subheading into a new note
  - §2020-03-25-0928 Integration with org-link
- - §2020-08-29-1223 Automated list of backlinks
- - §2020-04-17-1611 Automated lists of links
+ - §2021-04-03-2209 Turn org subheading into a new note
  - §2020-07-08-2147 Switching between Zettelkasten directories
  - §2020-05-09-0928 Wandering to a random note
 

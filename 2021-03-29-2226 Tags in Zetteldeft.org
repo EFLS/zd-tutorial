@@ -3,7 +3,7 @@
 
 Backlink: §2020-02-15-1247 Welcome
 
-Tags are a way to quickly retrieve a selection of notes (for example with =zetteldeft-search-tag=, or by §2020-04-17-1608 Generating lists of links).
+Tags are a way to quickly retrieve a selection of notes, for example with =zetteldeft-search-tag= or by generating lists of links (§2020-04-17-1608).
 
 Tags can appear anywhere in your note.
 To be found, tags should start with =#= or =@= and can contain letterse, numbers, underscores and dashes.
