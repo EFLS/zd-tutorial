@@ -3,8 +3,10 @@
 
 Backlink: §2020-05-10-1552 Zetteldeft ID and link concepts
 
-A backlink can be used to refer back to "parent" note, from which the current note branches out.
-It appears on a single line and contains a prefix string, a note link, and a title.
+A backlink is not a special link in any technical sense, but refers to links at the top of a note that refer "back" to related, overarching topics.
+In this way, a backlink connects to a "parent" note, from which the current note branches out.
+
+Backlinks appear at the top of notes and contain a prefix string, a note link, and a title.
 
 Use =zetteldeft-backlink-add= (or =C-c d b=) to pick a note to backlink to.
 The function will then include a link at the top of your current note.
