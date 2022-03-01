@@ -1,0 +1,17 @@
+#+title: Turn org subheading into a new note
+# Tags #zd-tutorial #zd-expansion
+
+A quick and easy function to turn the current Org heading into a new note.
+
+#+begin_src emacs-lisp
+(defun efls/zd-org-to-note ()
+  "Create new Zetteldeft note from current Org heading.
+The heading becomes the title, entry text becomes note content.
+Doesn't remove the original Org heading."
+  (interactive)
+  (let ((title (substring-no-properties (org-get-heading t t t t)))
+        (content (substring-no-properties (org-get-entry))))
+    (zetteldeft-new-file title)
+    (insert content)
+    (when (featurep 'evil) (evil-normal-state))))
+#+end_src
