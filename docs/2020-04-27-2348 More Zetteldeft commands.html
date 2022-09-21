@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2020-10-06 Tue 11:53 -->
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- 2022-09-21 Wed 22:24 -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>More Zetteldeft commands</title>
-<meta name="generator" content="Org mode">
-<style type="text/css">
- <!--/*--><![CDATA[/*><!--*/
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
   .title  { text-align: center;
              margin-bottom: .2em; }
   .subtitle { text-align: center;
@@ -28,8 +28,9 @@
   #postamble p, #preamble p { font-size: 90%; margin: .2em; }
   p.verse { margin-left: 3%; }
   pre {
-    border: 1px solid #ccc;
-    box-shadow: 3px 3px 3px #eee;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
     padding: 8pt;
     font-family: monospace;
     overflow: auto;
@@ -37,22 +38,22 @@
   }
   pre.src {
     position: relative;
-    overflow: visible;
-    padding-top: 1.2em;
+    overflow: auto;
   }
   pre.src:before {
     display: none;
     position: absolute;
-    background-color: white;
-    top: -10px;
-    right: 10px;
+    top: -8px;
+    right: 12px;
     padding: 3px;
-    border: 1px solid black;
+    color: #555;
+    background-color: #f2f2f299;
   }
-  pre.src:hover:before { display: inline;}
+  pre.src:hover:before { display: inline; margin-top: 14px;}
   /* Languages per Org manual */
   pre.src-asymptote:before { content: 'Asymptote'; }
   pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
   pre.src-C:before { content: 'C'; }
   /* pre.src-C++ doesn't work in CSS */
   pre.src-clojure:before { content: 'Clojure'; }
@@ -187,56 +188,9 @@
     { font-size: 10px; font-weight: bold; white-space: nowrap; }
   .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { width: 90%; }
-  /*]]>*/-->
+  .org-svg { }
 </style>
 <link rel='stylesheet' href='static/style.css' type='text/css'/>
-<script type="text/javascript">
-/*
-@licstart  The following is the entire license notice for the
-JavaScript code in this tag.
-
-Copyright (C) 2012-2020 Free Software Foundation, Inc.
-
-The JavaScript code in this tag is free software: you can
-redistribute it and/or modify it under the terms of the GNU
-General Public License (GNU GPL) as published by the Free Software
-Foundation, either version 3 of the License, or (at your option)
-any later version.  The code is distributed WITHOUT ANY WARRANTY;
-without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
-
-As additional permission under GNU GPL version 3 section 7, you
-may distribute non-source (e.g., minimized or compacted) forms of
-that code without the copy of the GNU GPL normally required by
-section 4, provided you include this license notice and a URL
-through which recipients can access the Corresponding Source.
-
-
-@licend  The above is the entire license notice
-for the JavaScript code in this tag.
-*/
-<!--/*--><![CDATA[/*><!--*/
- function CodeHighlightOn(elem, id)
- {
-   var target = document.getElementById(id);
-   if(null != target) {
-     elem.cacheClassElem = elem.className;
-     elem.cacheClassTarget = target.className;
-     target.className = "code-highlighted";
-     elem.className   = "code-highlighted";
-   }
- }
- function CodeHighlightOff(elem, id)
- {
-   var target = document.getElementById(id);
-   if(elem.cacheClassElem)
-     elem.className = elem.cacheClassElem;
-   if(elem.cacheClassTarget)
-     target.className = elem.cacheClassTarget;
- }
-/*]]>*///-->
-</script>
 </head>
 <body>
 <div id="preamble" class="status">
@@ -250,7 +204,7 @@ for the JavaScript code in this tag.
     </ul>
 </div>
 </div>
-<div id="content">
+<div id="content" class="content">
 <header>
 <h1 class="title">More Zetteldeft commands</h1>
 </header><p>
@@ -262,19 +216,26 @@ Once you are familiar with the basics (<a href="./2020-02-15-1626 Zetteldeft bas
 </p>
 
 <p>
+First off, use <code>C-c d .</code> (for <code>zetteldeft-browse</code>) to enter a "follow link loop": select a link to follow with <code>avy</code>, similar to <code>zetteldeft-follow-link</code> but in repeat.
+Exit the loop with <code>ESC</code> or <code>C-g</code>.
+</p>
+
+<p>
 When navigating your Zettelkasten, you might want to open a link in <b>another window</b>.
 Rather than hitting <code>C-c d f</code>, use <code>C-c d F</code> (which is <code>zetteldeft-avy-file-search-ace-window</code>).
 It will split the window if you only have one window open, follow the link in the other if you have two windows, or prompt you to pick a window in which to open the destination if you have more than two.
 </p>
 
 <p>
-Open a Deft search for a <b>tag</b> with <code>C-c d t</code> (for <code>zetteldeft-avy-tag-search</code>).
+See a tag in a note you&rsquo;d like to search for?
+Quickly open a Deft search for it with <code>C-c d t</code> (for <code>zetteldeft-avy-tag-search</code>) and make your choice with <code>avy</code>.
 Forgotten which tags are in use?
-Generate an overview with <code>C-c d T</code> (for <code>zetteldeft-tag-buffer</code>), which will create a new buffer listing all of your tags.
+Generate an overview of all tags in a new buffer with <code>C-c d T</code> (for <code>zetteldeft-tag-buffer</code>).
+For more on tags, see <a href="./2021-03-29-2226 Tags in Zetteldeft.html">§2021-03-29-2226</a> Tags in Zetteldeft
 </p>
 
 <p>
-Because all links are kept in plain text, it can be useful to use Deft to search full text for an ID.
+Because all links are kept in plain text, it can be useful to use Deft to search for an ID (rather than opening the note the ID belongs to).
 For example, with <code>C-c d c</code> (which calls <code>zetteldeft-search-current-id</code>) you search Deft with the note ID you are currently visiting.
 This allows you to quickly identify which notes link to the <b>current</b> note.
 </p>
@@ -285,6 +246,11 @@ With <code>C-c d r</code> (or <code>zetteldeft-file-rename</code>) you can.
 It will even change the <code>#TITLE:</code> declaration at the top of your note (or <code>zetteldeft-title-prefix</code>).
 What&rsquo;s more: if you rename an existing note <i>without</i> a Zetteldeft ID in its filename, the rename function will generate one and include it in the new filename.
 You can use this feature to migrate existing notes into Zetteldeft (but beware of multiple notes with the same ID).
+</p>
+
+<p>
+To find <b>dead links</b> in your Zetteldeft notes, call <code>zetteldeft-dead-links-buffer</code>.
+A new buffer will display links that have no destination.
 </p>
 
 <p>
