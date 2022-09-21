@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2022-09-21 Wed 22:24 -->
+<!-- 2022-09-21 Wed 22:53 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>START HERE</title>
@@ -199,6 +199,7 @@
     &mdash;
     <ul>
         <li><a href='./2020-02-15-1247 Welcome.html'>Welcome</a></li>
+        <li><a href='./2022-09-21-2228 Index of all notes in zd-tutorial.html'>Index</a></li>
         <li><a href='https://efls.github.io/zetteldeft'
 	       style='float: right'>Zetteldeft</a></li>
     </ul>
@@ -220,16 +221,16 @@ If you use MELPA and <code>use-package</code>, installing is as easy as:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">(<span style="color: #b6a0ff; font-weight: bold;">use-package</span> <span style="color: #00bcff;">deft</span>
-  <span style="color: #f78fe7; font-weight: bold;">:ensure</span> t
-  <span style="color: #f78fe7; font-weight: bold;">:init</span>
-    (<span style="color: #b6a0ff; font-weight: bold;">setq</span> deft-extensions '(<span style="color: #79a8ff;">"org"</span> <span style="color: #79a8ff;">"md"</span> <span style="color: #79a8ff;">"txt"</span>)
+<pre class="src src-emacs-lisp">(<span style="color: #5317ac; font-weight: bold;">use-package</span> <span style="color: #0000c0;">deft</span>
+  <span style="color: #8f0075; font-weight: bold;">:ensure</span> t
+  <span style="color: #8f0075; font-weight: bold;">:init</span>
+    (<span style="color: #5317ac; font-weight: bold;">setq</span> deft-extensions '(<span style="color: #2544bb;">"org"</span> <span style="color: #2544bb;">"md"</span> <span style="color: #2544bb;">"txt"</span>)
           deft-use-filename-as-title t))
 
-(<span style="color: #b6a0ff; font-weight: bold;">use-package</span> <span style="color: #00bcff;">zetteldeft</span>
-  <span style="color: #f78fe7; font-weight: bold;">:ensure</span> t
-  <span style="color: #f78fe7; font-weight: bold;">:after</span> deft
-  <span style="color: #f78fe7; font-weight: bold;">:config</span> (zetteldeft-set-classic-keybindings))
+(<span style="color: #5317ac; font-weight: bold;">use-package</span> <span style="color: #0000c0;">zetteldeft</span>
+  <span style="color: #8f0075; font-weight: bold;">:ensure</span> t
+  <span style="color: #8f0075; font-weight: bold;">:after</span> deft
+  <span style="color: #8f0075; font-weight: bold;">:config</span> (zetteldeft-set-classic-keybindings))
 </pre>
 </div>
 
@@ -253,7 +254,7 @@ and tell Deft to refresh:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">(<span style="color: #b6a0ff; font-weight: bold;">setq</span> deft-directory default-directory)
+<pre class="src src-emacs-lisp">(<span style="color: #5317ac; font-weight: bold;">setq</span> deft-directory default-directory)
 
 (deft)
 (deft-refresh)
@@ -266,10 +267,10 @@ If you already use Zetteldeft and have a personal config, override it with the c
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">(<span style="color: #b6a0ff; font-weight: bold;">setq</span> zetteldeft-link-indicator <span style="color: #79a8ff;">"&#167;"</span>
-      zetteldeft-id-format <span style="color: #79a8ff;">"%Y-%m-%d-%H%M"</span>
-      zetteldeft-id-regex <span style="color: #79a8ff;">"[0-9]\\{4\\}</span><span style="color: #abab00; font-weight: bold;">\\</span><span style="color: #e7a59a; font-weight: bold;">(</span><span style="color: #79a8ff;">-[0-9]\\{2,\\}</span><span style="color: #abab00; font-weight: bold;">\\</span><span style="color: #e7a59a; font-weight: bold;">)</span><span style="color: #79a8ff;">\\{3\\}"</span>
-      zetteldeft-tag-regex <span style="color: #79a8ff;">"[#@][a-z-]+"</span>)
+<pre class="src src-emacs-lisp">(<span style="color: #5317ac; font-weight: bold;">setq</span> zetteldeft-link-indicator <span style="color: #2544bb;">"&#167;"</span>
+      zetteldeft-id-format <span style="color: #2544bb;">"%Y-%m-%d-%H%M"</span>
+      zetteldeft-id-regex <span style="color: #2544bb;">"[0-9]\\{4\\}</span><span style="color: #654d0f; font-weight: bold;">\\</span><span style="color: #8b1030; font-weight: bold;">(</span><span style="color: #2544bb;">-[0-9]\\{2,\\}</span><span style="color: #654d0f; font-weight: bold;">\\</span><span style="color: #8b1030; font-weight: bold;">)</span><span style="color: #2544bb;">\\{3\\}"</span>
+      zetteldeft-tag-regex <span style="color: #2544bb;">"[#@][a-z-]+"</span>)
 </pre>
 </div>
 

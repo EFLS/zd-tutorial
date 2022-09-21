@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2022-09-21 Wed 22:24 -->
+<!-- 2022-09-21 Wed 22:53 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Switching between Zettelkasten directories</title>
@@ -199,6 +199,7 @@
     &mdash;
     <ul>
         <li><a href='./2020-02-15-1247 Welcome.html'>Welcome</a></li>
+        <li><a href='./2022-09-21-2228 Index of all notes in zd-tutorial.html'>Index</a></li>
         <li><a href='https://efls.github.io/zetteldeft'
 	       style='float: right'>Zetteldeft</a></li>
     </ul>
@@ -233,16 +234,16 @@ First, define two functions that change the <code>deft-directory</code> and then
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">(<span style="color: #b6a0ff; font-weight: bold;">defun</span> <span style="color: #feacd0;">zd-a</span> ()
-  (<span style="color: #b6a0ff; font-weight: bold;">interactive</span>)
+<pre class="src src-emacs-lisp">(<span style="color: #5317ac; font-weight: bold;">defun</span> <span style="color: #721045;">zd-a</span> ()
+  (<span style="color: #5317ac; font-weight: bold;">interactive</span>)
   (deft)
-  (<span style="color: #b6a0ff; font-weight: bold;">setq</span> deft-directory <span style="color: #79a8ff;">"~/zd-a/"</span>)
+  (<span style="color: #5317ac; font-weight: bold;">setq</span> deft-directory <span style="color: #2544bb;">"~/zd-a/"</span>)
   (deft-refresh))
 
-(<span style="color: #b6a0ff; font-weight: bold;">defun</span> <span style="color: #feacd0;">zd-b</span> ()
+(<span style="color: #5317ac; font-weight: bold;">defun</span> <span style="color: #721045;">zd-b</span> ()
   (deft)
-  (<span style="color: #b6a0ff; font-weight: bold;">interactive</span>)
-  (<span style="color: #b6a0ff; font-weight: bold;">setq</span> deft-directory <span style="color: #79a8ff;">"~/zd-b/"</span>)
+  (<span style="color: #5317ac; font-weight: bold;">interactive</span>)
+  (<span style="color: #5317ac; font-weight: bold;">setq</span> deft-directory <span style="color: #2544bb;">"~/zd-b/"</span>)
   (deft-refresh))
 </pre>
 </div>
@@ -256,12 +257,12 @@ Next, create a hydra for convenient swithcing between the two.
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">(<span style="color: #b6a0ff; font-weight: bold;">defhydra</span> zd-switch (<span style="color: #f78fe7; font-weight: bold;">:foreign-keys</span> nil <span style="color: #f78fe7; font-weight: bold;">:exit</span> t)
-  <span style="color: #b0d6f5;">"Switch between Deft directories.</span>
-<span style="color: #b0d6f5;">"</span>
-  (<span style="color: #79a8ff;">"a"</span> zd-a <span style="color: #79a8ff;">"Zetteldeft dir A"</span>)
-  (<span style="color: #79a8ff;">"b"</span> zd-b <span style="color: #79a8ff;">"Zetteldeft dir B"</span>)
-  (<span style="color: #79a8ff;">"q"</span> nil <span style="color: #79a8ff;">"Quit"</span>))
+<pre class="src src-emacs-lisp">(<span style="color: #5317ac; font-weight: bold;">defhydra</span> zd-switch (<span style="color: #8f0075; font-weight: bold;">:foreign-keys</span> nil <span style="color: #8f0075; font-weight: bold;">:exit</span> t)
+  <span style="color: #2a486a;">"Switch between Deft directories.</span>
+<span style="color: #2a486a;">"</span>
+  (<span style="color: #2544bb;">"a"</span> zd-a <span style="color: #2544bb;">"Zetteldeft dir A"</span>)
+  (<span style="color: #2544bb;">"b"</span> zd-b <span style="color: #2544bb;">"Zetteldeft dir B"</span>)
+  (<span style="color: #2544bb;">"q"</span> nil <span style="color: #2544bb;">"Quit"</span>))
 </pre>
 </div>
 
@@ -271,11 +272,11 @@ One way to speed things up is to temporarily increase Emacs&rsquo; garbage colle
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">(<span style="color: #b6a0ff; font-weight: bold;">defun</span> <span style="color: #feacd0;">zd-dir-big</span> ()
-  (<span style="color: #b6a0ff; font-weight: bold;">interactive</span>)
-  (<span style="color: #b6a0ff; font-weight: bold;">let</span> ((gc-cons-threshold most-positive-fixnum))
+<pre class="src src-emacs-lisp">(<span style="color: #5317ac; font-weight: bold;">defun</span> <span style="color: #721045;">zd-dir-big</span> ()
+  (<span style="color: #5317ac; font-weight: bold;">interactive</span>)
+  (<span style="color: #5317ac; font-weight: bold;">let</span> ((gc-cons-threshold most-positive-fixnum))
     (deft)
-    (<span style="color: #b6a0ff; font-weight: bold;">setq</span> deft-directory <span style="color: #79a8ff;">"~/zd-big/"</span>)
+    (<span style="color: #5317ac; font-weight: bold;">setq</span> deft-directory <span style="color: #2544bb;">"~/zd-big/"</span>)
     (deft-refresh)))
 </pre>
 </div>

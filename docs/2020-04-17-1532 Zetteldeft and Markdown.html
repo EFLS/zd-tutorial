@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2022-09-21 Wed 22:24 -->
+<!-- 2022-09-21 Wed 22:53 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Zetteldeft and Markdown</title>
@@ -199,6 +199,7 @@
     &mdash;
     <ul>
         <li><a href='./2020-02-15-1247 Welcome.html'>Welcome</a></li>
+        <li><a href='./2022-09-21-2228 Index of all notes in zd-tutorial.html'>Index</a></li>
         <li><a href='https://efls.github.io/zetteldeft'
 	       style='float: right'>Zetteldeft</a></li>
     </ul>
@@ -226,7 +227,7 @@ Zetteldeft uses Deft to create new notes, so using <code>zetteldeft-new-file</co
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">(<span style="color: #b6a0ff; font-weight: bold;">setq</span> deft-extensions '(<span style="color: #79a8ff;">"md"</span> <span style="color: #79a8ff;">"org"</span> <span style="color: #79a8ff;">"txt"</span>))
+<pre class="src src-emacs-lisp">(<span style="color: #5317ac; font-weight: bold;">setq</span> deft-extensions '(<span style="color: #2544bb;">"md"</span> <span style="color: #2544bb;">"org"</span> <span style="color: #2544bb;">"txt"</span>))
 </pre>
 </div>
 
@@ -236,8 +237,8 @@ This can be easily achieved by setting the <code>zetteldeft-link-indicator</code
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">(<span style="color: #b6a0ff; font-weight: bold;">setq</span> zetteldeft-link-indicator <span style="color: #79a8ff;">"[["</span>)
-(<span style="color: #b6a0ff; font-weight: bold;">setq</span> zetteldeft-link-suffix <span style="color: #79a8ff;">"]]"</span>)
+<pre class="src src-emacs-lisp">(<span style="color: #5317ac; font-weight: bold;">setq</span> zetteldeft-link-indicator <span style="color: #2544bb;">"[["</span>)
+(<span style="color: #5317ac; font-weight: bold;">setq</span> zetteldeft-link-suffix <span style="color: #2544bb;">"]]"</span>)
 </pre>
 </div>
 
@@ -246,7 +247,7 @@ To make sure that your Markdown notes start with correct title syntax, customize
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">(<span style="color: #b6a0ff; font-weight: bold;">setq</span> zetteldeft-title-prefix <span style="color: #79a8ff;">"# "</span>)
+<pre class="src src-emacs-lisp">(<span style="color: #5317ac; font-weight: bold;">setq</span> zetteldeft-title-prefix <span style="color: #2544bb;">"# "</span>)
 </pre>
 </div>
 
@@ -267,9 +268,9 @@ Alternatively, if you want to highlight the brackets as well, you need to escape
 
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">(font-lock-add-keywords 'markdown-mode
-   `((,(concat <span style="color: #79a8ff;">"\\[\\["</span>
+   `((,(concat <span style="color: #2544bb;">"\\[\\["</span>
                zetteldeft-id-regex
-               <span style="color: #79a8ff;">"\\]\\]"</span>)
+               <span style="color: #2544bb;">"\\]\\]"</span>)
       . font-lock-warning-face)))
 </pre>
 </div>

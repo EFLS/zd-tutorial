@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2022-09-21 Wed 22:24 -->
+<!-- 2022-09-21 Wed 22:53 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Automated lists of links</title>
@@ -199,6 +199,7 @@
     &mdash;
     <ul>
         <li><a href='./2020-02-15-1247 Welcome.html'>Welcome</a></li>
+        <li><a href='./2022-09-21-2228 Index of all notes in zd-tutorial.html'>Index</a></li>
         <li><a href='https://efls.github.io/zetteldeft'
 	       style='float: right'>Zetteldeft</a></li>
     </ul>
@@ -208,7 +209,7 @@
 <header>
 <h1 class="title">Automated lists of links</h1>
 </header><p>
-Backlink: <a href="./2020-04-17-1605 Expansions HUB.html">§2020-04-17-1605</a> Expansions HUB
+Backlink: <a href="./2020-04-17-1608 Generating lists of links.html">§2020-04-17-1608</a> Generating a list of links
 </p>
 
 <p>
@@ -216,79 +217,44 @@ Zetteldeft can generate lists of notes based on search terms, see <a href="./202
 </p>
 
 <p>
-To make updating these lists a little more convenient, you can create a function that you can then call straight from an org codeblock.
+THIS IS NOW MORE EASILY ACHIEVED WITH ORG DYNAMIC BLOCKS (<a href="./2022-09-21-2155 Automated list of links with Org dynamic blocks.html">§2022-09-21-2155</a>)
+</p>
+
+<hr>
+
+<p>
+To make updating these lists a little more convenient, you can do this from an Org source block in order to easily update the resulting list.
+This is what <code>zetteldeft-list-links</code> is for.
+It is meant to be called from an Org source block and will update the list of links (by hitting <code>C-c C-c</code> in it).
 </p>
 
 <p>
-First, let&rsquo;s create an additional function:
+For an example , take a look at the following source block and the list it generates:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">(<span style="color: #b6a0ff; font-weight: bold;">defun</span> <span style="color: #feacd0;">efls/zetteldeft-links</span> (str <span style="color: #6ae4b9; font-weight: bold;">&amp;optional</span> missing silent)
-  <span style="color: #b0d6f5;">"Crude attempt to automate `</span><span style="color: #00bcff;">zetteldeft-insert-list-links-missing</span><span style="color: #b0d6f5;">'.</span>
-<span style="color: #b0d6f5;">Meant to be called from a source block.</span>
-<span style="color: #b0d6f5;">Replaces the list below the block with an updated list.</span>
-<span style="color: #b0d6f5;">When MISSING is t, use `</span><span style="color: #00bcff;">zetteldeft-insert-list-links-missing</span><span style="color: #b0d6f5;">'.</span>
-<span style="color: #b0d6f5;">With MISSING as t, suppress the timestamp at the end."</span>
-  (<span style="color: #b6a0ff; font-weight: bold;">save-excursion</span>
-    (org-forward-element)
-    <span style="color: #bec2ca;">; </span><span style="color: #bec2ca;">Delete any existing list</span>
-    (<span style="color: #b6a0ff; font-weight: bold;">when</span> (org-in-item-p) (delete-region (point) (org-end-of-item-list)))
-    <span style="color: #bec2ca;">; </span><span style="color: #bec2ca;">New line &amp; insert links</span>
-    (<span style="color: #b6a0ff; font-weight: bold;">if</span> missing
-        (<span style="color: #b6a0ff; font-weight: bold;">progn</span> 
-          (save-buffer)
-          (deft-refresh)
-          (zetteldeft-insert-list-links-missing str))
-      (zetteldeft-insert-list-links str))
-    (<span style="color: #b6a0ff; font-weight: bold;">unless</span> silent
-      (org-return-indent)
-      (insert (current-time-string) <span style="color: #79a8ff;">"\n"</span>))))
+<pre class="src src-emacs-lisp">(zetteldeft-list-links <span style="color: #2544bb;">"#zd-advanced"</span>)
 </pre>
 </div>
 
-<p>
-Like it says in the doc string, this function is meant to be called from an org code block.
-Try it for yourself by first executing the block above, and then the one below (with <code>C-c C-c</code>).
-</p>
-
-<div class="org-src-container">
-<pre class="src src-emacs-lisp">(efls/zetteldeft-links <span style="color: #79a8ff;">"#zetteldeft"</span>)
-</pre>
-</div>
+<ul class="org-ul">
+<li><a href="./2020-08-29-1223 Automated list of backlinks.html">§2020-08-29-1223</a> Automated list of backlinks</li>
+<li><a href="./2020-04-17-1608 Generating lists of links.html">§2020-04-17-1608</a> Generating a list of links</li>
+<li><a href="./2020-04-17-1552 Creating graphs.html">§2020-04-17-1552</a> Creating graphs</li>
+</ul>
 
 <p>
 Neat huh?
 </p>
 
 <p>
+To insert such a block, use <code>zetteldeft-insert-list-links-block</code>.
+It will prompt for a search string.
+</p>
+
+<p>
 As an aside: we can use this function to generate a list of backlinks (i.e., link to notes that link to the current note).
-See <a href="./2020-08-29-1223 List of backlinks.html">§2020-08-29-1223</a> for details.
-</p>
-
-<p>
-To further automate this, we can introduce a final function that generates the code block above.
-It asks for a search term and then generates the source block.
-</p>
-
-<div class="org-src-container">
-<pre class="src src-emacs-lisp">(<span style="color: #b6a0ff; font-weight: bold;">defun</span> <span style="color: #feacd0;">efls/zetteldeft-links-codeblock</span> (str)
-  <span style="color: #b0d6f5;">"Ask for a STR to search, and insert an org-mode</span>
-<span style="color: #b0d6f5;">source block that calls `</span><span style="color: #00bcff;">efls/zetteldeft-links</span><span style="color: #b0d6f5;">'.</span>
-<span style="color: #b0d6f5;">When called with a prefix, pass t to said function."</span>
-  (<span style="color: #b6a0ff; font-weight: bold;">interactive</span>
-    (list (read-string <span style="color: #79a8ff;">"Search: "</span>)))
-  (newline)
-  (insert <span style="color: #79a8ff;">"#+BEGIN_SRC emacs-lisp :results silent\n"</span>
-          <span style="color: #79a8ff;">"(efls/zetteldeft-links \""</span> str<span style="color: #79a8ff;">"\""</span>)
-  (<span style="color: #b6a0ff; font-weight: bold;">when</span> current-prefix-arg (insert <span style="color: #79a8ff;">" t"</span>))
-  (insert <span style="color: #79a8ff;">")\n"</span>
-          <span style="color: #79a8ff;">"#+END_SRC\n"</span>))
-</pre>
-</div>
-
-<p>
-And with a prefix, it makes sure only missing links are added (by calling <code>zetteldeft-insert-list-links-missing</code>).
+See <a href="./2020-08-29-1223 Automated list of backlinks.html">§2020-08-29-1223</a> for details.
 </p>
 </div>
 </body>

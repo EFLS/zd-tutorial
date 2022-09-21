@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2022-09-21 Wed 22:24 -->
+<!-- 2022-09-21 Wed 22:53 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Wandering to a random note</title>
@@ -199,6 +199,7 @@
     &mdash;
     <ul>
         <li><a href='./2020-02-15-1247 Welcome.html'>Welcome</a></li>
+        <li><a href='./2022-09-21-2228 Index of all notes in zd-tutorial.html'>Index</a></li>
         <li><a href='https://efls.github.io/zetteldeft'
 	       style='float: right'>Zetteldeft</a></li>
     </ul>
@@ -237,12 +238,12 @@ It will pop open the deft buffer, pick a random zetteldeft ID, and enter it as a
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">(<span style="color: #b6a0ff; font-weight: bold;">defun</span> <span style="color: #feacd0;">zetteldeft-wander</span> ()
-  <span style="color: #b0d6f5;">"Wander through `</span><span style="color: #00bcff;">zetteldeft</span><span style="color: #b0d6f5;">' notes.</span>
-<span style="color: #b0d6f5;">Search `</span><span style="color: #00bcff;">deft</span><span style="color: #b0d6f5;">' for a random `</span><span style="color: #00bcff;">zetteldeft</span><span style="color: #b0d6f5;">' id."</span>
-  (<span style="color: #b6a0ff; font-weight: bold;">interactive</span>)
+<pre class="src src-emacs-lisp">(<span style="color: #5317ac; font-weight: bold;">defun</span> <span style="color: #721045;">zetteldeft-wander</span> ()
+  <span style="color: #2a486a;">"Wander through `</span><span style="color: #0000c0;">zetteldeft</span><span style="color: #2a486a;">' notes.</span>
+<span style="color: #2a486a;">Search `</span><span style="color: #0000c0;">deft</span><span style="color: #2a486a;">' for a random `</span><span style="color: #0000c0;">zetteldeft</span><span style="color: #2a486a;">' id."</span>
+  (<span style="color: #5317ac; font-weight: bold;">interactive</span>)
   (switch-to-buffer deft-buffer)
-  (<span style="color: #b6a0ff; font-weight: bold;">let</span> ((all-files (deft-find-all-files-no-prefix)))
+  (<span style="color: #5317ac; font-weight: bold;">let</span> ((all-files (deft-find-all-files-no-prefix)))
     (deft-filter
       (zetteldeft--lift-id
         (nth (random (length all-files))

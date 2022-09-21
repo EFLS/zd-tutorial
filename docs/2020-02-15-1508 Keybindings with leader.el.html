@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2022-09-21 Wed 22:24 -->
+<!-- 2022-09-21 Wed 22:53 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Keybindings with leader</title>
@@ -199,6 +199,7 @@
     &mdash;
     <ul>
         <li><a href='./2020-02-15-1247 Welcome.html'>Welcome</a></li>
+        <li><a href='./2022-09-21-2228 Index of all notes in zd-tutorial.html'>Index</a></li>
         <li><a href='https://efls.github.io/zetteldeft'
 	       style='float: right'>Zetteldeft</a></li>
     </ul>
@@ -217,28 +218,28 @@ If you use <code>general.el</code> and like to use leader keys, I suggest the fo
 
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">(general-define-key
-  <span style="color: #f78fe7; font-weight: bold;">:prefix</span> <span style="color: #79a8ff;">"SPC"</span>
-  <span style="color: #f78fe7; font-weight: bold;">:non-normal-prefix</span> <span style="color: #79a8ff;">"C-SPC"</span>
-  <span style="color: #f78fe7; font-weight: bold;">:states</span> '(normal visual motion emacs)
-  <span style="color: #f78fe7; font-weight: bold;">:keymaps</span> 'override
-  <span style="color: #79a8ff;">"d"</span>  '(nil <span style="color: #f78fe7; font-weight: bold;">:wk</span> <span style="color: #79a8ff;">"deft"</span>)
-  <span style="color: #79a8ff;">"dd"</span> '(deft <span style="color: #f78fe7; font-weight: bold;">:wk</span> <span style="color: #79a8ff;">"deft"</span>)
-  <span style="color: #79a8ff;">"dD"</span> '(zetteldeft-deft-new-search <span style="color: #f78fe7; font-weight: bold;">:wk</span> <span style="color: #79a8ff;">"new search"</span>)
-  <span style="color: #79a8ff;">"dR"</span> '(deft-refresh <span style="color: #f78fe7; font-weight: bold;">:wk</span> <span style="color: #79a8ff;">"refresh"</span>)
-  <span style="color: #79a8ff;">"ds"</span> '(zetteldeft-search-at-point <span style="color: #f78fe7; font-weight: bold;">:wk</span> <span style="color: #79a8ff;">"search at point"</span>)
-  <span style="color: #79a8ff;">"dc"</span> '(zetteldeft-search-current-id <span style="color: #f78fe7; font-weight: bold;">:wk</span> <span style="color: #79a8ff;">"search current id"</span>)
-  <span style="color: #79a8ff;">"df"</span> '(zetteldeft-follow-link <span style="color: #f78fe7; font-weight: bold;">:wk</span> <span style="color: #79a8ff;">"follow link"</span>)
-  <span style="color: #79a8ff;">"dF"</span> '(zetteldeft-avy-file-search-ace-window <span style="color: #f78fe7; font-weight: bold;">:wk</span> <span style="color: #79a8ff;">"avy file other window"</span>)
-  <span style="color: #79a8ff;">"dl"</span> '(zetteldeft-avy-link-search <span style="color: #f78fe7; font-weight: bold;">:wk</span> <span style="color: #79a8ff;">"avy link search"</span>)
-  <span style="color: #79a8ff;">"dt"</span> '(zetteldeft-avy-tag-search <span style="color: #f78fe7; font-weight: bold;">:wk</span> <span style="color: #79a8ff;">"avy tag search"</span>)
-  <span style="color: #79a8ff;">"dT"</span> '(zetteldeft-tag-buffer <span style="color: #f78fe7; font-weight: bold;">:wk</span> <span style="color: #79a8ff;">"tag list"</span>)
-  <span style="color: #79a8ff;">"di"</span> '(zetteldeft-find-file-id-insert <span style="color: #f78fe7; font-weight: bold;">:wk</span> <span style="color: #79a8ff;">"insert id"</span>)
-  <span style="color: #79a8ff;">"dI"</span> '(zetteldeft-find-file-full-title-insert <span style="color: #f78fe7; font-weight: bold;">:wk</span> <span style="color: #79a8ff;">"insert full title"</span>)
-  <span style="color: #79a8ff;">"do"</span> '(zetteldeft-find-file <span style="color: #f78fe7; font-weight: bold;">:wk</span> <span style="color: #79a8ff;">"find file"</span>)
-  <span style="color: #79a8ff;">"dn"</span> '(zetteldeft-new-file <span style="color: #f78fe7; font-weight: bold;">:wk</span> <span style="color: #79a8ff;">"new file"</span>)
-  <span style="color: #79a8ff;">"dN"</span> '(zetteldeft-new-file-and-link <span style="color: #f78fe7; font-weight: bold;">:wk</span> <span style="color: #79a8ff;">"new file &amp; link"</span>)
-  <span style="color: #79a8ff;">"dr"</span> '(zetteldeft-file-rename <span style="color: #f78fe7; font-weight: bold;">:wk</span> <span style="color: #79a8ff;">"rename"</span>)
-  <span style="color: #79a8ff;">"dx"</span> '(zetteldeft-count-words <span style="color: #f78fe7; font-weight: bold;">:wk</span> <span style="color: #79a8ff;">"count words"</span>))
+  <span style="color: #8f0075; font-weight: bold;">:prefix</span> <span style="color: #2544bb;">"SPC"</span>
+  <span style="color: #8f0075; font-weight: bold;">:non-normal-prefix</span> <span style="color: #2544bb;">"C-SPC"</span>
+  <span style="color: #8f0075; font-weight: bold;">:states</span> '(normal visual motion emacs)
+  <span style="color: #8f0075; font-weight: bold;">:keymaps</span> 'override
+  <span style="color: #2544bb;">"d"</span>  '(nil <span style="color: #8f0075; font-weight: bold;">:wk</span> <span style="color: #2544bb;">"deft"</span>)
+  <span style="color: #2544bb;">"dd"</span> '(deft <span style="color: #8f0075; font-weight: bold;">:wk</span> <span style="color: #2544bb;">"deft"</span>)
+  <span style="color: #2544bb;">"dD"</span> '(zetteldeft-deft-new-search <span style="color: #8f0075; font-weight: bold;">:wk</span> <span style="color: #2544bb;">"new search"</span>)
+  <span style="color: #2544bb;">"dR"</span> '(deft-refresh <span style="color: #8f0075; font-weight: bold;">:wk</span> <span style="color: #2544bb;">"refresh"</span>)
+  <span style="color: #2544bb;">"ds"</span> '(zetteldeft-search-at-point <span style="color: #8f0075; font-weight: bold;">:wk</span> <span style="color: #2544bb;">"search at point"</span>)
+  <span style="color: #2544bb;">"dc"</span> '(zetteldeft-search-current-id <span style="color: #8f0075; font-weight: bold;">:wk</span> <span style="color: #2544bb;">"search current id"</span>)
+  <span style="color: #2544bb;">"df"</span> '(zetteldeft-follow-link <span style="color: #8f0075; font-weight: bold;">:wk</span> <span style="color: #2544bb;">"follow link"</span>)
+  <span style="color: #2544bb;">"dF"</span> '(zetteldeft-avy-file-search-ace-window <span style="color: #8f0075; font-weight: bold;">:wk</span> <span style="color: #2544bb;">"avy file other window"</span>)
+  <span style="color: #2544bb;">"dl"</span> '(zetteldeft-avy-link-search <span style="color: #8f0075; font-weight: bold;">:wk</span> <span style="color: #2544bb;">"avy link search"</span>)
+  <span style="color: #2544bb;">"dt"</span> '(zetteldeft-avy-tag-search <span style="color: #8f0075; font-weight: bold;">:wk</span> <span style="color: #2544bb;">"avy tag search"</span>)
+  <span style="color: #2544bb;">"dT"</span> '(zetteldeft-tag-buffer <span style="color: #8f0075; font-weight: bold;">:wk</span> <span style="color: #2544bb;">"tag list"</span>)
+  <span style="color: #2544bb;">"di"</span> '(zetteldeft-find-file-id-insert <span style="color: #8f0075; font-weight: bold;">:wk</span> <span style="color: #2544bb;">"insert id"</span>)
+  <span style="color: #2544bb;">"dI"</span> '(zetteldeft-find-file-full-title-insert <span style="color: #8f0075; font-weight: bold;">:wk</span> <span style="color: #2544bb;">"insert full title"</span>)
+  <span style="color: #2544bb;">"do"</span> '(zetteldeft-find-file <span style="color: #8f0075; font-weight: bold;">:wk</span> <span style="color: #2544bb;">"find file"</span>)
+  <span style="color: #2544bb;">"dn"</span> '(zetteldeft-new-file <span style="color: #8f0075; font-weight: bold;">:wk</span> <span style="color: #2544bb;">"new file"</span>)
+  <span style="color: #2544bb;">"dN"</span> '(zetteldeft-new-file-and-link <span style="color: #8f0075; font-weight: bold;">:wk</span> <span style="color: #2544bb;">"new file &amp; link"</span>)
+  <span style="color: #2544bb;">"dr"</span> '(zetteldeft-file-rename <span style="color: #8f0075; font-weight: bold;">:wk</span> <span style="color: #2544bb;">"rename"</span>)
+  <span style="color: #2544bb;">"dx"</span> '(zetteldeft-count-words <span style="color: #8f0075; font-weight: bold;">:wk</span> <span style="color: #2544bb;">"count words"</span>))
 </pre>
 </div>
 </div>

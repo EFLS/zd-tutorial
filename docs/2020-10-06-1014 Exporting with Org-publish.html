@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2022-09-21 Wed 22:24 -->
+<!-- 2022-09-21 Wed 22:53 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Exporting with org-publish</title>
@@ -199,6 +199,7 @@
     &mdash;
     <ul>
         <li><a href='./2020-02-15-1247 Welcome.html'>Welcome</a></li>
+        <li><a href='./2022-09-21-2228 Index of all notes in zd-tutorial.html'>Index</a></li>
         <li><a href='https://efls.github.io/zetteldeft'
 	       style='float: right'>Zetteldeft</a></li>
     </ul>
@@ -233,27 +234,27 @@ Get in touch if you&rsquo;d like to attempt to do so.
 
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">(add-to-list 'org-publish-project-alist
-  `(<span style="color: #79a8ff;">"zd-tutorial"</span>
-    <span style="color: #f78fe7; font-weight: bold;">:preparation-function</span> zetteldeft--export-prepare-tmp-notes
-    <span style="color: #f78fe7; font-weight: bold;">:base-directory</span> ,zetteldeft-export-tmp-dir
-    <span style="color: #f78fe7; font-weight: bold;">:publishing-directory</span> ,(expand-file-name <span style="color: #79a8ff;">"docs/"</span> default-directory)
-   <span style="color: #bec2ca;">; </span><span style="color: #bec2ca;">publishing configuration</span>
-    <span style="color: #f78fe7; font-weight: bold;">:base-extension</span> <span style="color: #79a8ff;">"org"</span>
-    <span style="color: #f78fe7; font-weight: bold;">:publishing-function</span> org-html-publish-to-html
-   <span style="color: #bec2ca;">; </span><span style="color: #bec2ca;">org config</span>
-    <span style="color: #f78fe7; font-weight: bold;">:headline-levels</span> 4
-    <span style="color: #f78fe7; font-weight: bold;">:with-tags</span> nil
-    <span style="color: #f78fe7; font-weight: bold;">:with-toc</span> nil
-    <span style="color: #f78fe7; font-weight: bold;">:with-date</span> nil
-    <span style="color: #f78fe7; font-weight: bold;">:with-author</span> nil
-   <span style="color: #bec2ca;">; </span><span style="color: #bec2ca;">html config</span>
-    <span style="color: #f78fe7; font-weight: bold;">:html-head-extra</span> <span style="color: #79a8ff;">"&lt;link rel='</span><span style="color: #00bcff;">stylesheet</span><span style="color: #79a8ff;">' href='</span><span style="color: #00bcff;">static/style.css</span><span style="color: #79a8ff;">' type='</span><span style="color: #00bcff;">text/css</span><span style="color: #79a8ff;">'/&gt;\n"</span>
-    <span style="color: #f78fe7; font-weight: bold;">:html-preamble</span> ,(<span style="color: #b6a0ff; font-weight: bold;">with-temp-buffer</span>
+  `(<span style="color: #2544bb;">"zd-tutorial"</span>
+    <span style="color: #8f0075; font-weight: bold;">:preparation-function</span> zetteldeft--export-prepare-tmp-notes
+    <span style="color: #8f0075; font-weight: bold;">:base-directory</span> ,zetteldeft-export-tmp-dir
+    <span style="color: #8f0075; font-weight: bold;">:publishing-directory</span> ,(expand-file-name <span style="color: #2544bb;">"docs/"</span> default-directory)
+   <span style="color: #566F7F;">; </span><span style="color: #566F7F;">publishing configuration</span>
+    <span style="color: #8f0075; font-weight: bold;">:base-extension</span> <span style="color: #2544bb;">"org"</span>
+    <span style="color: #8f0075; font-weight: bold;">:publishing-function</span> org-html-publish-to-html
+   <span style="color: #566F7F;">; </span><span style="color: #566F7F;">org config</span>
+    <span style="color: #8f0075; font-weight: bold;">:headline-levels</span> 4
+    <span style="color: #8f0075; font-weight: bold;">:with-tags</span> nil
+    <span style="color: #8f0075; font-weight: bold;">:with-toc</span> nil
+    <span style="color: #8f0075; font-weight: bold;">:with-date</span> nil
+    <span style="color: #8f0075; font-weight: bold;">:with-author</span> nil
+   <span style="color: #566F7F;">; </span><span style="color: #566F7F;">html config</span>
+    <span style="color: #8f0075; font-weight: bold;">:html-head-extra</span> <span style="color: #2544bb;">"&lt;link rel='</span><span style="color: #0000c0;">stylesheet</span><span style="color: #2544bb;">' href='</span><span style="color: #0000c0;">static/style.css</span><span style="color: #2544bb;">' type='</span><span style="color: #0000c0;">text/css</span><span style="color: #2544bb;">'/&gt;\n"</span>
+    <span style="color: #8f0075; font-weight: bold;">:html-preamble</span> ,(<span style="color: #5317ac; font-weight: bold;">with-temp-buffer</span>
                       (insert-file-contents 
-                        (expand-file-name <span style="color: #79a8ff;">"docs/static/html-preamble.html"</span>
+                        (expand-file-name <span style="color: #2544bb;">"docs/static/html-preamble.html"</span>
                                           default-directory))
                       (buffer-string))
-    <span style="color: #f78fe7; font-weight: bold;">:html-postamble</span> nil))
+    <span style="color: #8f0075; font-weight: bold;">:html-postamble</span> nil))
 </pre>
 </div>
 

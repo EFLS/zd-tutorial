@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2022-09-21 Wed 22:24 -->
+<!-- 2022-09-21 Wed 22:53 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Integration with org-link</title>
@@ -199,6 +199,7 @@
     &mdash;
     <ul>
         <li><a href='./2020-02-15-1247 Welcome.html'>Welcome</a></li>
+        <li><a href='./2022-09-21-2228 Index of all notes in zd-tutorial.html'>Index</a></li>
         <li><a href='https://efls.github.io/zetteldeft'
 	       style='float: right'>Zetteldeft</a></li>
     </ul>
@@ -231,10 +232,10 @@ First, we define <code>org-link</code> parameters.
 
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">(org-link-set-parameters
-  <span style="color: #79a8ff;">"zdlink"</span>
-  <span style="color: #f78fe7; font-weight: bold;">:follow</span> (<span style="color: #b6a0ff; font-weight: bold;">lambda</span> (str) (zetteldeft--search-filename (zetteldeft--lift-id str)))
-  <span style="color: #f78fe7; font-weight: bold;">:complete</span> 'efls/zd-complete-link
-  <span style="color: #f78fe7; font-weight: bold;">:help-echo</span> <span style="color: #79a8ff;">"Searches provided ID in zetteldeft"</span>)
+  <span style="color: #2544bb;">"zdlink"</span>
+  <span style="color: #8f0075; font-weight: bold;">:follow</span> (<span style="color: #5317ac; font-weight: bold;">lambda</span> (str) (zetteldeft--search-filename (zetteldeft--lift-id str)))
+  <span style="color: #8f0075; font-weight: bold;">:complete</span> 'efls/zd-complete-link
+  <span style="color: #8f0075; font-weight: bold;">:help-echo</span> <span style="color: #2544bb;">"Searches provided ID in zetteldeft"</span>)
 </pre>
 </div>
 
@@ -257,13 +258,13 @@ For convenience, we can also create a small completion function to facilitate in
 </p>
 
 <div class="org-src-container">
-<pre class="src src-emacs-lisp">(<span style="color: #b6a0ff; font-weight: bold;">defun</span> <span style="color: #feacd0;">efls/zd-complete-link</span> ()
-  <span style="color: #b0d6f5;">"Link completion for `</span><span style="color: #00bcff;">zdlink</span><span style="color: #b0d6f5;">' type links"</span>
-  (<span style="color: #b6a0ff; font-weight: bold;">let*</span> ((file (completing-read <span style="color: #79a8ff;">"File to link to: "</span>
+<pre class="src src-emacs-lisp">(<span style="color: #5317ac; font-weight: bold;">defun</span> <span style="color: #721045;">efls/zd-complete-link</span> ()
+  <span style="color: #2a486a;">"Link completion for `</span><span style="color: #0000c0;">zdlink</span><span style="color: #2a486a;">' type links"</span>
+  (<span style="color: #5317ac; font-weight: bold;">let*</span> ((file (completing-read <span style="color: #2544bb;">"File to link to: "</span>
                 (deft-find-all-files-no-prefix)))
          (link (zetteldeft--lift-id file)))
-     (<span style="color: #b6a0ff; font-weight: bold;">unless</span> link (<span style="color: #d0bc00; font-weight: bold;">user-error</span> <span style="color: #79a8ff;">"No file selected"</span>))
-     (concat <span style="color: #79a8ff;">"zdlink:"</span> link)))
+     (<span style="color: #5317ac; font-weight: bold;">unless</span> link (<span style="color: #813e00; font-weight: bold;">user-error</span> <span style="color: #2544bb;">"No file selected"</span>))
+     (concat <span style="color: #2544bb;">"zdlink:"</span> link)))
 </pre>
 </div>
 

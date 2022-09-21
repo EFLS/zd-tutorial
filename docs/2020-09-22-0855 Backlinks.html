@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2022-09-21 Wed 22:24 -->
+<!-- 2022-09-21 Wed 22:53 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Backlinks</title>
@@ -199,6 +199,7 @@
     &mdash;
     <ul>
         <li><a href='./2020-02-15-1247 Welcome.html'>Welcome</a></li>
+        <li><a href='./2022-09-21-2228 Index of all notes in zd-tutorial.html'>Index</a></li>
         <li><a href='https://efls.github.io/zetteldeft'
 	       style='float: right'>Zetteldeft</a></li>
     </ul>
@@ -212,12 +213,17 @@ Backlink: <a href="./2020-05-10-1552 Zetteldeft ID and link concepts.html">§202
 </p>
 
 <p>
-A backlink can be used to refer back to "parent" note, from which the current note branches out.
+A backlink is not a special link in any technical sense, but refers to links at the top of a note that refer "back" to related, overarching topics.
+In this way, a backlink connects to a "parent" note, from which the current note branches out.
 </p>
 
 <p>
-Use <code>zetteldeft-backlink-add</code> (or <code>C-c d b</code>) to pick a note.
-The function will then include a link at the top of your current note, right below the title.
+Backlinks appear at the top of notes and contain a prefix string, a note link, and a title.
+</p>
+
+<p>
+Use <code>zetteldeft-backlink-add</code> (or <code>C-c d b</code>) to pick a note to backlink to.
+The function will then include a link at the top of your current note.
 </p>
 
 <p>
@@ -225,11 +231,16 @@ This backlink is prepended with <code>zetteldeft-backlink-prefix</code>, which c
 </p>
 
 <p>
-To create a new note and include a backlink to the previous note in one go, use <code>zetteldeft-new-file-and-backlink</code> (or <code>C-c d B</code>).
+For customizations on where in the current buffer the backlink should be inserted, customize <code>zetteldeft-backlink-location-function</code>.
+See the documentation for details.
 </p>
 
 <p>
-If, rather than a single backlink, you want to find all notes linking to the current note, take a look at <a href="./2020-08-29-1223 List of backlinks.html">§2020-08-29-1223</a> Automated list of backlinks.
+To create a new note and include a backlink to the current note in one go, use <code>zetteldeft-new-file-and-backlink</code> (or <code>C-c d B</code>).
+</p>
+
+<p>
+If, rather than a single backlink, you want to find all notes linking to the current note, call <code>zetteldeft-search-current-id</code> (<code>C-c d c</code>) or take a look at <a href="./2020-08-29-1223 Automated list of backlinks.html">§2020-08-29-1223</a> Automated list of backlinks.
 </p>
 </div>
 </body>

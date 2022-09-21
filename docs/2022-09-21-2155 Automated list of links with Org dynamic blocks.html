@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2022-09-21 Wed 22:24 -->
+<!-- 2022-09-21 Wed 22:53 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Automated list of backlinks</title>
+<title>Automated list of links with Org dynamic blocks</title>
 <meta name="generator" content="Org Mode" />
 <style>
   #content { max-width: 60em; margin: auto; }
@@ -199,6 +199,7 @@
     &mdash;
     <ul>
         <li><a href='./2020-02-15-1247 Welcome.html'>Welcome</a></li>
+        <li><a href='./2022-09-21-2228 Index of all notes in zd-tutorial.html'>Index</a></li>
         <li><a href='https://efls.github.io/zetteldeft'
 	       style='float: right'>Zetteldeft</a></li>
     </ul>
@@ -206,40 +207,40 @@
 </div>
 <div id="content" class="content">
 <header>
-<h1 class="title">Automated list of backlinks</h1>
+<h1 class="title">Automated list of links with Org dynamic blocks</h1>
 </header><p>
-Backlink: <a href="./2020-04-17-1605 Expansions HUB.html">§2020-04-17-1605</a> Expansions HUB
+Backlink: <a href="./2020-04-17-1608 Generating lists of links.html">§2020-04-17-1608</a> Generating a list of links
 </p>
 
 <p>
-The <code>zetteldeft-insert-list-links</code> generates a list of links to notes with a specific search term (<a href="./2020-04-17-1608 Generating lists of links.html">§2020-04-17-1608</a>).
-By providing a notes ID as search string, the resulting list contains all notes linking to that note.
+Org-mode provides Dynamic Blocks, which can programmatically update their contents.
 </p>
 
 <p>
-This can be used to generate a list of backlinks.
+The <code>zetteldeft-links</code> dynamic block looks like this:
 </p>
-
-<p>
-Building on to an automated list of links (<a href="./2020-04-17-1611 Automated lists of links.html">§2020-04-17-1611</a>), we can sort of automate this.
-</p>
-
-<p>
-To achieve this, simply provide <code>(zetteldeft--current-id)</code> as search term, like so:
-</p>
-
-<div class="org-src-container">
-<pre class="src src-emacs-lisp">(efls/zetteldeft-links (zetteldeft--current-id) nil 'silent)
-</pre>
-</div>
 
 <ul class="org-ul">
+<li><a href="./2020-08-29-1223 Automated list of backlinks.html">§2020-08-29-1223</a> Automated list of backlinks</li>
 <li><a href="./2020-04-17-1611 Automated lists of links.html">§2020-04-17-1611</a> Automated lists of links</li>
-<li><a href="./2020-04-17-1605 Expansions HUB.html">§2020-04-17-1605</a> Expansions HUB</li>
+<li><a href="./2020-04-17-1608 Generating lists of links.html">§2020-04-17-1608</a> Generating a list of links</li>
+<li><a href="./2020-04-17-1552 Creating graphs.html">§2020-04-17-1552</a> Creating graphs</li>
 </ul>
 
 <p>
-With <code>t</code> as a second argument, only notes that aren&rsquo;t linked to yet, are included in the list.
+When activated (via <code>C-c C-c</code>), the contents between <code>#+BEGIN:</code> and <code>#+END:</code> will be replaced by a list of links to all notes containing provided search string via <code>:search "string"</code>.
+</p>
+
+<p>
+Additional options are
+</p>
+<ul class="org-ul">
+<li><code>:sort t</code> to sort the results (with most recent note at the top)</li>
+<li><code>:missing-only t</code> to only include missing links</li>
+</ul>
+
+<p>
+Use <code>zetteldeft-org-dblock-insert-links</code> to create such a dynamic block, or do so via <code>org-dynamic-block-insert-dblock</code>.
 </p>
 </div>
 </body>
