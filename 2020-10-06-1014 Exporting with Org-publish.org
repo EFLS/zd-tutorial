@@ -18,9 +18,9 @@ Get in touch if you'd like to attempt to do so.
 #+begin_src emacs-lisp :results silent
 (add-to-list 'org-publish-project-alist
   `("zd-tutorial"
-    :preparation-function zetteldeft-export--prepare-tmp-notes
+    :preparation-function zetteldeft--export-prepare-tmp-notes
     :base-directory ,zetteldeft-export-tmp-dir
-    :publishing-directory ,(expand-file-name "docs" default-directory)
+    :publishing-directory ,(expand-file-name "docs/" default-directory)
    ; publishing configuration
     :base-extension "org"
     :publishing-function org-html-publish-to-html
