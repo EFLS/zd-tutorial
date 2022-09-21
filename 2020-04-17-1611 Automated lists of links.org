@@ -5,6 +5,10 @@ Backlink: §2020-04-17-1608 Generating a list of links
 
 Zetteldeft can generate lists of notes based on search terms, see §2020-04-17-1608.
 
+THIS IS NOW MORE EASILY ACHIEVED WITH ORG DYNAMIC BLOCKS (§2022-09-21-2155)
+
+-----
+
 To make updating these lists a little more convenient, you can do this from an Org source block in order to easily update the resulting list.
 This is what =zetteldeft-list-links= is for.
 It is meant to be called from an Org source block and will update the list of links (by hitting =C-c C-c= in it).
@@ -15,7 +19,8 @@ For an example , take a look at the following source block and the list it gener
 (zetteldeft-list-links "#zd-advanced")
 #+end_src
 
- - §2020-04-17-1608 Generating lists of links
+ - §2020-08-29-1223 Automated list of backlinks
+ - §2020-04-17-1608 Generating a list of links
  - §2020-04-17-1552 Creating graphs
 
 Neat huh?

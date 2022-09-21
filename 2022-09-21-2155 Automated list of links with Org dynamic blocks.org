@@ -1,0 +1,23 @@
+#+title: Automated list of links with Org dynamic blocks
+# Tags #zetteldeft #zd-advanced #zd-tutorial
+
+Backlink: §2020-04-17-1608 Generating a list of links
+
+Org-mode provides Dynamic Blocks, which can programmatically update their contents.
+
+The =zetteldeft-links= dynamic block looks like this:
+
+#+BEGIN: zetteldeft-links :search "#zd-advanced" :sort t
+ - §2020-08-29-1223 Automated list of backlinks
+ - §2020-04-17-1611 Automated lists of links
+ - §2020-04-17-1608 Generating a list of links
+ - §2020-04-17-1552 Creating graphs
+#+END:
+
+When activated (via =C-c C-c=), the contents between =#+BEGIN:= and =#+END:= will be replaced by a list of links to all notes containing provided search string via =:search "string"=.
+
+Additional options are
+ - =:sort t= to sort the results (with most recent note at the top)
+ - =:missing-only t= to only include missing links
+
+Use =zetteldeft-org-dblock-insert-links= to create such a dynamic block, or do so via =org-dynamic-block-insert-dblock=.

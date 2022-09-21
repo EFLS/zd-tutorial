@@ -2,7 +2,7 @@
 # Tags #zetteldeft #zd-tutorial #zd-advanced
 
 Backlink: §2020-04-27-2358 Advanced Zetteldeft features
-See also: §2020-04-17-1611 Automated lists of links
+See also: §2022-09-21-2155 Automated list of links with Org dynamic blocks
    
 Working with a Zettelkasten system means creating links to other notes.
 This is a crucial activity in order to create meaning and structure within your cloud of notes.

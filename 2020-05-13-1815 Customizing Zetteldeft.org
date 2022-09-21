@@ -8,14 +8,12 @@ For notes on a Markdown setup, look at §2020-04-17-1532.
 
 Other customization options are discussed in the following notes:
 
-#+BEGIN_SRC emacs-lisp :results silent
-(efls/zetteldeft-links "#customize" nil 'silent)
-#+END_SRC
-
+#+BEGIN: zetteldeft-links :search "#customize"
  - §2020-09-22-0855 Backlinks
  - §2020-09-20-2106 The home note
  - §2020-05-15-0908 Customize link appearance
  - §2020-04-17-1532 Zetteldeft and Markdown
  - §2020-05-14-1742 Customizing titles
  - §2020-05-14-1740 Customize link IDs
+#+END:
 
