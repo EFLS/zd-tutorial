@@ -1,0 +1,22 @@
+#+title: Generating lists of links
+# Tags #zetteldeft #zd-tutorial #zd-advanced
+
+See also: §2022-09-21-2155 Automated list of links with Org dynamic blocks
+
+Working with a Zettelkasten system means creating links to other notes.
+This is a crucial activity in order to create meaning and structure within your cloud of notes.
+
+For this purpose, it can be useful to quickly generate a list of notes with a specific search term.
+That's what =zetteldeft-insert-list-links= does.
+It's best used in combination with =#tags=.
+
+Calling =zetteldeft-insert-list-links= prompts for a search term and will insert a list of links to the search results.
+
+To customize how such a list entry is formatted, set =zetteldeft-list-prefix= to a string of your choice.
+
+Sometimes, rather thang simply generating a list, I like to manually link to notes in the text, but then I wonder which notes I /haven't/ linked to yet.
+
+That's where =zetteldeft-insert-list-links-missing= comes in.
+(Note, however, that once the missing notes have been linked to, they are now part of the current note, which means that calling the function again will not include those notes.)
+
+The good news is that in Org-mode, all of this can be automated via dynamic blocks (§2022-09-21-2155).
