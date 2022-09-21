@@ -1,0 +1,40 @@
+#+title: Index of all notes in zd-tutorial
+# Tags #zd-tutorial
+
+Instructions on installation: §2020-01-05-2214 START HERE
+
+Welcome note as starting point: §2020-02-15-1247
+
+- Introducing the commands
+  + §2020-02-15-1626 Zetteldeft basic commands
+  + §2020-04-27-2348 More Zetteldeft commands
+- More advanced features (§2020-04-27-2358)
+  + §2020-04-17-1608 Generating lists of links
+  + §2022-09-21-2155 Automated list of links with Org dynamic blocks
+  + §2020-09-20-2106 The home note
+- Concepts
+  + §2020-05-10-1552 Zetteldeft ID and link concepts
+  + §2021-03-29-2226 Tags in Zetteldeft
+  + §2020-09-22-0855 Backlinks
+- Expansions with more code (§2020-04-17-1605)
+  + §2020-05-09-0928 Wandering to a random note
+  + §2021-04-03-2209 Turn org subheading into a new note
+  + §2020-07-08-2147 Switching between Zettelkasten directories
+- Customization (§2020-05-13-1815)
+  + §2020-05-15-0908 Customize link appearance
+  + §2020-05-14-1742 Customizing titles
+  + §2020-05-14-1740 Customize link IDs
+  + §2020-04-17-1532 Zetteldeft and Markdown
+- Experimental stuff
+  + §2020-10-06-1014 Exporting with org-publish
+  + §2020-04-17-1552 Creating graphs
+- General ideas on notes & Zettelkasten
+  + §2020-05-15-2247 What should go in your Zettelkasten
+    
+Other links (outdated or incomplete info):
+#+BEGIN: zetteldeft-links :search "#zd-tutorial" :missing-only t
+ - §2020-08-29-1223 Automated list of backlinks
+ - §2020-04-17-1611 Automated lists of links
+ - §2020-04-18-1304 Zetteldeft and spacemacs
+
+#+END:
